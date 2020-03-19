@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "calculatorViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    CGRect winFrame = [[ UIScreen mainScreen] bounds];
+    self.window = [[ UIWindow alloc] initWithFrame:winFrame];
+    //assert (self.window != nil);
+    
+    calculatorViewController *calcVC = [[calculatorViewController alloc]init];
+    self.window.rootViewController = calcVC;
+    
+    self.window.backgroundColor = [UIColor redColor];
+    [self.window makeKeyWindow];
+
     return YES;
 }
 

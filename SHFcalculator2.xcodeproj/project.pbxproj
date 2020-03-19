@@ -14,6 +14,8 @@
 		E16E0E45242388A2003AA2A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16E0E44242388A2003AA2A3 /* Assets.xcassets */; };
 		E16E0E48242388A2003AA2A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16E0E46242388A2003AA2A3 /* LaunchScreen.storyboard */; };
 		E16E0E4B242388A3003AA2A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E4A242388A3003AA2A3 /* main.m */; };
+		E16E0E54242388DE003AA2A3 /* calculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E52242388DE003AA2A3 /* calculatorViewController.m */; };
+		E16E0E55242388DE003AA2A3 /* calculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16E0E53242388DE003AA2A3 /* calculatorViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		E16E0E47242388A2003AA2A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E16E0E49242388A3003AA2A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E16E0E4A242388A3003AA2A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E16E0E51242388DE003AA2A3 /* calculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculatorViewController.h; sourceTree = "<group>"; };
+		E16E0E52242388DE003AA2A3 /* calculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculatorViewController.m; sourceTree = "<group>"; };
+		E16E0E53242388DE003AA2A3 /* calculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = calculatorViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,9 @@
 				E16E0E46242388A2003AA2A3 /* LaunchScreen.storyboard */,
 				E16E0E49242388A3003AA2A3 /* Info.plist */,
 				E16E0E4A242388A3003AA2A3 /* main.m */,
+				E16E0E51242388DE003AA2A3 /* calculatorViewController.h */,
+				E16E0E52242388DE003AA2A3 /* calculatorViewController.m */,
+				E16E0E53242388DE003AA2A3 /* calculatorViewController.xib */,
 			);
 			path = SHFcalculator2;
 			sourceTree = "<group>";
@@ -135,6 +143,7 @@
 			files = (
 				E16E0E48242388A2003AA2A3 /* LaunchScreen.storyboard in Resources */,
 				E16E0E45242388A2003AA2A3 /* Assets.xcassets in Resources */,
+				E16E0E55242388DE003AA2A3 /* calculatorViewController.xib in Resources */,
 				E16E0E432423888A003AA2A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +158,7 @@
 				E16E0E402423888A003AA2A3 /* ViewController.m in Sources */,
 				E16E0E3A2423888A003AA2A3 /* AppDelegate.m in Sources */,
 				E16E0E4B242388A3003AA2A3 /* main.m in Sources */,
+				E16E0E54242388DE003AA2A3 /* calculatorViewController.m in Sources */,
 				E16E0E3D2423888A003AA2A3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
