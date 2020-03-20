@@ -10,12 +10,12 @@
 		E16E0E3A2423888A003AA2A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E392423888A003AA2A3 /* AppDelegate.m */; };
 		E16E0E3D2423888A003AA2A3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E3C2423888A003AA2A3 /* SceneDelegate.m */; };
 		E16E0E402423888A003AA2A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E3F2423888A003AA2A3 /* ViewController.m */; };
-		E16E0E432423888A003AA2A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16E0E412423888A003AA2A3 /* Main.storyboard */; };
 		E16E0E45242388A2003AA2A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16E0E44242388A2003AA2A3 /* Assets.xcassets */; };
 		E16E0E48242388A2003AA2A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16E0E46242388A2003AA2A3 /* LaunchScreen.storyboard */; };
 		E16E0E4B242388A3003AA2A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E4A242388A3003AA2A3 /* main.m */; };
 		E16E0E54242388DE003AA2A3 /* calculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E52242388DE003AA2A3 /* calculatorViewController.m */; };
 		E16E0E55242388DE003AA2A3 /* calculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16E0E53242388DE003AA2A3 /* calculatorViewController.xib */; };
+		E19ADDBE2423C5CB00E4863F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19ADDBC2423C5CB00E4863F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,6 @@
 		E16E0E3C2423888A003AA2A3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		E16E0E3E2423888A003AA2A3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E16E0E3F2423888A003AA2A3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E16E0E422423888A003AA2A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E16E0E44242388A2003AA2A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E16E0E47242388A2003AA2A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E16E0E49242388A3003AA2A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		E16E0E51242388DE003AA2A3 /* calculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculatorViewController.h; sourceTree = "<group>"; };
 		E16E0E52242388DE003AA2A3 /* calculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculatorViewController.m; sourceTree = "<group>"; };
 		E16E0E53242388DE003AA2A3 /* calculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = calculatorViewController.xib; sourceTree = "<group>"; };
+		E19ADDBD2423C5CB00E4863F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +66,13 @@
 		E16E0E372423888A003AA2A3 /* SHFcalculator2 */ = {
 			isa = PBXGroup;
 			children = (
+				E19ADDBC2423C5CB00E4863F /* Main.storyboard */,
 				E16E0E382423888A003AA2A3 /* AppDelegate.h */,
 				E16E0E392423888A003AA2A3 /* AppDelegate.m */,
 				E16E0E3B2423888A003AA2A3 /* SceneDelegate.h */,
 				E16E0E3C2423888A003AA2A3 /* SceneDelegate.m */,
 				E16E0E3E2423888A003AA2A3 /* ViewController.h */,
 				E16E0E3F2423888A003AA2A3 /* ViewController.m */,
-				E16E0E412423888A003AA2A3 /* Main.storyboard */,
 				E16E0E44242388A2003AA2A3 /* Assets.xcassets */,
 				E16E0E46242388A2003AA2A3 /* LaunchScreen.storyboard */,
 				E16E0E49242388A3003AA2A3 /* Info.plist */,
@@ -144,7 +144,7 @@
 				E16E0E48242388A2003AA2A3 /* LaunchScreen.storyboard in Resources */,
 				E16E0E45242388A2003AA2A3 /* Assets.xcassets in Resources */,
 				E16E0E55242388DE003AA2A3 /* calculatorViewController.xib in Resources */,
-				E16E0E432423888A003AA2A3 /* Main.storyboard in Resources */,
+				E19ADDBE2423C5CB00E4863F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,20 +166,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E16E0E412423888A003AA2A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E16E0E422423888A003AA2A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E16E0E46242388A2003AA2A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E16E0E47242388A2003AA2A3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E19ADDBC2423C5CB00E4863F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E19ADDBD2423C5CB00E4863F /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
