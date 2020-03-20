@@ -27,9 +27,11 @@
     return self;
 }
 
-- (IBAction)numberStrike:(id)sender {
+- (IBAction)keyStrike:(id)sender {
     UIButton *pressedKey = (UIButton *)sender;
-    NSLog(@"%ld",pressedKey.tag);
+    NSLog(@"%@", pressedKey.accessibilityLabel);
+    NSLog(@"%@", pressedKey.currentTitle);
+    NSLog(@"%@", pressedKey.accessibilityIdentifier);
 }
 
 
