@@ -11,6 +11,8 @@
 @interface calculatorViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *key1;
+@property (weak, nonatomic) IBOutlet UILabel *currentNumberDisplay;
+@property (weak, nonatomic) IBOutlet UILabel *equationDisplay;
 
 @end
 
@@ -32,6 +34,10 @@
     NSLog(@"%@", pressedKey.accessibilityLabel);
     NSLog(@"%@", pressedKey.currentTitle);
     NSLog(@"%@", pressedKey.accessibilityIdentifier);
+    
+    _equationDisplay.text = pressedKey.currentTitle;
+    
+    
 }
 
 
