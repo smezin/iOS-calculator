@@ -154,7 +154,7 @@
                     <rect key="frame" x="211" y="630" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <accessibility key="accessibilityConfiguration" identifier="period" label="periodKey"/>
+                    <accessibility key="accessibilityConfiguration" identifier="." label="periodKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title=".">
                         <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -167,7 +167,7 @@
                     <rect key="frame" x="55" y="318" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.60476036269430056" green="0.35376121545555461" blue="0.0011703598188596627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <accessibility key="accessibilityConfiguration" identifier="clear" label="clearKey"/>
+                    <accessibility key="accessibilityConfiguration" identifier="c" label="clearKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="C">
                         <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -180,7 +180,7 @@
                     <rect key="frame" x="133" y="318" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.0021603829204377631" green="0.25376457256994811" blue="0.010256511356716761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <accessibility key="accessibilityConfiguration" identifier="openPar" label="parenthesesKey"/>
+                    <accessibility key="accessibilityConfiguration" identifier="(" label="parenthesesKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="(">
                         <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -193,7 +193,7 @@
                     <rect key="frame" x="211" y="318" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.0021603829204377631" green="0.25376457256994811" blue="0.010256511356716761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <accessibility key="accessibilityConfiguration" identifier="closePar" label="parenthesesKey"/>
+                    <accessibility key="accessibilityConfiguration" identifier=")" label="parenthesesKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title=")">
                         <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -206,7 +206,7 @@
                     <rect key="frame" x="289" y="630" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <accessibility key="accessibilityConfiguration" identifier="exe" label="executeKey"/>
+                    <accessibility key="accessibilityConfiguration" identifier="=" label="solveKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="=">
                         <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -219,7 +219,7 @@
                     <rect key="frame" x="289" y="552" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.15768987679999999" green="0.2383053752" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <accessibility key="accessibilityConfiguration" identifier="plus" label="operatorKey"/>
+                    <accessibility key="accessibilityConfiguration" identifier="+" label="operatorKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="+">
                         <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -232,7 +232,7 @@
                     <rect key="frame" x="289" y="474" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.15768987679999999" green="0.2383053752" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <accessibility key="accessibilityConfiguration" identifier="substract" label="operatorKey"/>
+                    <accessibility key="accessibilityConfiguration" identifier="-" label="operatorKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="-">
                         <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -258,7 +258,7 @@
                     <rect key="frame" x="289" y="395" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.15768987679999999" green="0.2383053752" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <accessibility key="accessibilityConfiguration" identifier="multiply" label="operatorKey"/>
+                    <accessibility key="accessibilityConfiguration" identifier="x" label="operatorKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="x">
                         <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -271,7 +271,7 @@
                     <rect key="frame" x="289" y="318" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.15768987679999999" green="0.2383053752" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <accessibility key="accessibilityConfiguration" identifier="divide" label="operatorKey"/>
+                    <accessibility key="accessibilityConfiguration" identifier="/" label="operatorKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="/">
                         <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

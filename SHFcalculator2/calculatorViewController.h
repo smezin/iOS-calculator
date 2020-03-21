@@ -12,7 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface calculatorViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *currentNumberDisplay;
+@property (weak, nonatomic) IBOutlet UILabel *equationDisplay;
+
 
 @end
+
+
+
 
 NS_ASSUME_NONNULL_END
