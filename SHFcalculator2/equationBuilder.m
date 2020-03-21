@@ -31,6 +31,16 @@
 
 -(NSString*)addKeyType: (NSString*)keyType ofValue: (NSString*)value toEquation: (NSString*)equation;
 {
+    if ([keyType isEqual:@"numberKey"])
+        NSLog(@"number");
+    else if ([keyType isEqual:@"operatorKey"])
+        NSLog(@"operator");
+    else if ([keyType isEqual:@"periodKey"])
+        NSLog(@"period");
+    else if ([keyType isEqual:@"parenthesesKey"])
+        NSLog(@"parenthesesKey");
+    else if([keyType isEqual:@"clearKey"])
+        NSLog(@"clear");
     return @"0";
 }
 

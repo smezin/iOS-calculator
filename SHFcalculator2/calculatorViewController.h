@@ -10,11 +10,26 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+enum keyType
+{
+    NUMBRES, OPERATORS, PARENTHESES, CLEAR, PERIOD, SOLVE
+};
+
 @interface calculatorViewController : UIViewController
+{
+    NSString *_digitsDisplay;
+    NSString *_equationDisplay;
+    enum keyType previosOperation;
+    BOOL decimalPeriodInEffect;
+    int numberOfUnclosedOpenParenthesis;    
+}
 
-@property (weak, nonatomic) IBOutlet UILabel *currentNumberDisplay;
-@property (weak, nonatomic) IBOutlet UILabel *equationDisplay;
-
+-(IBAction)numbers:(id)sender;
+-(IBAction)operators:(id)sender;
+-(IBAction)parentheses:(id)sender;
+-(IBAction)clear:(id)sender;
+-(IBAction)peiod:(id)sender;
+-(IBAction)solve:(id)sender;
 
 @end
 

@@ -7,12 +7,10 @@
 //
 
 #import "calculatorViewController.h"
-#import "equationBuilder.h"
+//#import "equationBuilder.h"
 
 
 @interface calculatorViewController ()
-
-@property (weak, nonatomic) IBOutlet UIButton *key1;
 
 @end
 
@@ -23,26 +21,34 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-
-- (IBAction)keyStrike:(id)sender {
-    UIButton *pressedKey = (UIButton *)sender;
-    NSString *accessLabel = pressedKey.accessibilityLabel;
-    NSString *currentTitle = pressedKey.currentTitle;
- 
-    if ([accessLabel isEqual:@"numberKey"])
-        NSLog(@"number");
-    else if ([accessLabel isEqual:@"operatorKey"])
-        NSLog(@"operator");
-    else if ([accessLabel isEqual:@"periodKey"])
-        NSLog(@"period");
-    else if ([accessLabel isEqual:@"parenthesesKey"])
-        NSLog(@"parenthesesKey");
-    else if([accessLabel isEqual:@"clearKey"])
-        NSLog(@"clear");
-    else if ([accessLabel isEqual:@"solveKey"])
-        NSLog(@"solve");
+-(IBAction)numbers:(id)sender
+{
+    
+    previosOperation = NUMBRES;
 }
-
-
+-(IBAction)operators:(id)sender
+{
+    
+    previosOperation = OPERATORS;
+}
+-(IBAction)parentheses:(id)sender
+{
+    
+    previosOperation = PARENTHESES;
+}
+-(IBAction)clear:(id)sender
+{
+    
+    previosOperation = CLEAR;
+}
+-(IBAction)peiod:(id)sender
+{
+    
+    previosOperation = PERIOD;
+}
+-(IBAction)solve:(id)sender
+{
+    
+}
 
 @end
