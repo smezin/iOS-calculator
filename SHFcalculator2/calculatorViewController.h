@@ -12,16 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 enum keyType
 {
-    NUMBRES, OPERATORS, PARENTHESES, CLEAR, PERIOD, SOLVE
+    NONE, NUMBRES, OPERATORS, PARENTHESES, CLEAR, PERIOD, SOLVE
 };
 
 @interface calculatorViewController : UIViewController
 {
     NSString *_digitsDisplay;
     NSString *_equationDisplay;
-    enum keyType previosOperation;
-    BOOL decimalPeriodInEffect;
-    int numberOfUnclosedOpenParenthesis;    
+    enum keyType _previosOperation;
+    BOOL _decimalPeriodInEffect;
+    int _numberOfUnclosedOpenParenthesis;
 }
 
 -(IBAction)numbers:(id)sender;
