@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 enum keyType
 {
-    NONE, NUMBRES, OPERATORS, PARENTHESES, CLEAR, PERIOD, SOLVE
+    NUMBRES, OPERATORS, OPEN_PARENTHESES, CLOSE_PARENTHESES,CLEAR, PERIOD, SOLVE
 };
 
 @interface calculatorViewController : UIViewController
@@ -21,12 +21,13 @@ enum keyType
     NSString *_equationDisplay;
     enum keyType _previosOperation;
     BOOL _decimalPeriodInEffect;
-    int _numberOfUnclosedOpenParenthesis;
+    int _numberOfUnclosedParenthesis;
 }
 
 -(IBAction)numbers:(id)sender;
 -(IBAction)operators:(id)sender;
--(IBAction)parentheses:(id)sender;
+-(IBAction)openParentheses:(id)sender;
+-(IBAction)closeParentheses:(id)sender;
 -(IBAction)clear:(id)sender;
 -(IBAction)peiod:(id)sender;
 -(IBAction)solve:(id)sender;

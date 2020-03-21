@@ -186,7 +186,7 @@
                         <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="parentheses:" destination="-1" eventType="touchUpInside" id="YVD-Ax-YcM"/>
+                        <action selector="openParentheses:" destination="-1" eventType="touchUpInside" id="Bgp-wd-dHv"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN7-no-da6">
@@ -198,7 +198,7 @@
                         <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="parentheses:" destination="-1" eventType="touchUpInside" id="ajF-4u-GtZ"/>
+                        <action selector="closeParentheses:" destination="-1" eventType="touchUpInside" id="KWw-4G-7gw"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KN-vC-d7K">
@@ -226,6 +226,18 @@
                     </state>
                     <connections>
                         <action selector="operators:" destination="-1" eventType="touchUpInside" id="hrQ-KT-hJK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-3m-mqA">
+                    <rect key="frame" x="289" y="474" width="70" height="70"/>
+                    <color key="backgroundColor" red="0.15768987679999999" green="0.2383053752" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" identifier="-" label="operatorKey"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
+                    <state key="normal" title="-">
+                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="operators:" destination="-1" eventType="touchUpInside" id="BAJ-we-Oio"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn3-Sj-nMF">
@@ -271,18 +283,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-3m-mqA">
-                    <rect key="frame" x="289" y="474" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.15768987679999999" green="0.2383053752" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <accessibility key="accessibilityConfiguration" identifier="-" label="operatorKey"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
-                    <state key="normal" title="-">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="operators:" destination="-1" eventType="touchUpInside" id="BAJ-we-Oio"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.91772587435233155" green="0.91772587435233155" blue="0.91772587435233155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <accessibility key="accessibilityConfiguration" label="key1label"/>
@@ -370,7 +370,7 @@
                 <constraint firstItem="8iT-h3-c32" firstAttribute="trailing" secondItem="fn3-Sj-nMF" secondAttribute="trailing" id="zUQ-OX-gsC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-217" y="25"/>
+            <point key="canvasLocation" x="-217.39130434782609" y="24.776785714285712"/>
         </view>
     </objects>
 </document>
