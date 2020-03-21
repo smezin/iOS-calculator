@@ -7,9 +7,10 @@
 //
 
 #import "calculatorViewController.h"
+#import "Display.h"
 
 @interface calculatorViewController ()
-
+//
 @property (weak, nonatomic) IBOutlet UIButton *key1;
 @property (weak, nonatomic) IBOutlet UILabel *currentNumberDisplay;
 @property (weak, nonatomic) IBOutlet UILabel *equationDisplay;
@@ -31,25 +32,12 @@
 
 - (IBAction)keyStrike:(id)sender {
     UIButton *pressedKey = (UIButton *)sender;
-    NSLog(@"%@", pressedKey.accessibilityLabel);
-    NSLog(@"%@", pressedKey.currentTitle);
-    NSLog(@"%@", pressedKey.accessibilityIdentifier);
-    
-    _equationDisplay.text = pressedKey.currentTitle;
-    
-    
+    NSString *accessLabel = pressedKey.accessibilityLabel;
+    NSString *currentTitle = pressedKey.currentTitle;
+    NSString *accessId = pressedKey.accessibilityIdentifier;
+    NSLog(@"%@", accessLabel);
+    NSLog(@"%@", currentTitle);
+    NSLog(@"%@", accessId);
 }
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1392D5824260F5C00FC34DF /* Display.m in Sources */ = {isa = PBXBuildFile; fileRef = E1392D5724260F5C00FC34DF /* Display.m */; };
 		E16E0E3A2423888A003AA2A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E392423888A003AA2A3 /* AppDelegate.m */; };
 		E16E0E3D2423888A003AA2A3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E3C2423888A003AA2A3 /* SceneDelegate.m */; };
 		E16E0E402423888A003AA2A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E3F2423888A003AA2A3 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1392D5624260F5C00FC34DF /* Display.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Display.h; sourceTree = "<group>"; };
+		E1392D5724260F5C00FC34DF /* Display.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Display.m; sourceTree = "<group>"; };
 		E16E0E352423888A003AA2A3 /* SHFcalculator2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHFcalculator2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16E0E382423888A003AA2A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E16E0E392423888A003AA2A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 				E16E0E51242388DE003AA2A3 /* calculatorViewController.h */,
 				E16E0E52242388DE003AA2A3 /* calculatorViewController.m */,
 				E16E0E53242388DE003AA2A3 /* calculatorViewController.xib */,
+				E1392D5624260F5C00FC34DF /* Display.h */,
+				E1392D5724260F5C00FC34DF /* Display.m */,
 			);
 			path = SHFcalculator2;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			files = (
 				E16E0E402423888A003AA2A3 /* ViewController.m in Sources */,
 				E16E0E3A2423888A003AA2A3 /* AppDelegate.m in Sources */,
+				E1392D5824260F5C00FC34DF /* Display.m in Sources */,
 				E16E0E4B242388A3003AA2A3 /* main.m in Sources */,
 				E16E0E54242388DE003AA2A3 /* calculatorViewController.m in Sources */,
 				E16E0E3D2423888A003AA2A3 /* SceneDelegate.m in Sources */,
