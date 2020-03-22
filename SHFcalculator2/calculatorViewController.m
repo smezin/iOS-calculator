@@ -36,6 +36,7 @@
         _digitsDisplay = keyP.currentTitle;
     }
     self.digitsDisplayLabel.text = _digitsDisplay;
+    self.equationDisplayLabel.text = [_equationArray componentsJoinedByString:@""];
     _previosOperation = NUMBRES;
 }
 -(IBAction)operators:(id)sender
@@ -55,8 +56,8 @@
         _previosOperation = OPERATORS;
     }
     self.equationDisplayLabel.text = [_equationArray componentsJoinedByString:@""];
-    
 }
+
 -(IBAction)openParentheses:(id)sender
 {
     if (_previosOperation == OPERATORS || _previosOperation == OPEN_PARENTHESES || _previosOperation == SOLVE)
@@ -129,12 +130,5 @@
         _previosOperation = SOLVE;
     }
 }
-+(NSString*) beautify: (NSString*) number
-{
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    formatter.numberStyle = NSNumberFormatterDecimalStyle;
-    formatter.maximumFractionDigits = 20;
 
-    return [formatter stringFromNumber:number];
-}
 @end

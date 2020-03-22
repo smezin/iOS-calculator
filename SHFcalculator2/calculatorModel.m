@@ -35,14 +35,14 @@
     return _equation;
 }
 
-
 +(NSString*) solveEquation:(NSMutableArray*) eqaution
 {
     calculatorModel *calculate = [[calculatorModel alloc]initWithEquation:eqaution];
     while ([calculate equationContainsOpeartor:@"x" orOperator:@"/"])
     {
         [calculate extractValuesBeforeAndAfter:@"x" orOperator:@"/"];
-        [calculate solveSingleOperation];
+        if (![calculate solveSingleOperation])
+            return @"DIV/0 Error";
         [calculate replaceSubEquationWithResult];
     }
     while ([calculate equationContainsOpeartor:@"+" orOperator:@"-"])
@@ -52,11 +52,10 @@
         [calculate replaceSubEquationWithResult];
     }
     NSString *trimmedResult = [calculatorModel beautify:[[calculate equation] componentsJoinedByString:@""]];
-   // return [[calculate equation] componentsJoinedByString:@""];
     return trimmedResult;
 }
 
-+(NSString*) beautify: (NSString*) numberAsString
++(NSString*) beautify: (NSString*) numberAsString //cut trailing 0's
 {
     NSUInteger i = [numberAsString length]-1;
     for (; i >= 0 && [numberAsString characterAtIndex:i] == '0'; i--);
@@ -110,10 +109,15 @@
     else if ([_currentOperator isEqualToString:@"x"])
         _currentResult = _leftArgument * _rightArgument;
     else if ([_currentOperator isEqualToString:@"/"])
-        _currentResult = _leftArgument / _rightArgument;
+    {
+        if (_rightArgument == 0)
+            return NO;
+        else
+            _currentResult = _leftArgument / _rightArgument;
+    }
     else
         return NO;
-    _currentResultString = [NSString stringWithFormat:@"%.4f", _currentResult];
+    _currentResultString = [NSString stringWithFormat:@"%.6f", _currentResult];
     return YES;
 }
 
