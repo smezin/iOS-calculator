@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(BOOL) solveSingleOperation;
 -(NSMutableArray*) replaceSubEquationWithResult;
 -(BOOL) equationContainsOpeartor: (NSString*) operator1 orOperator: (NSString*) operator2;
++(NSString*) beautify: (NSString*) numberAsString;
 @end
 
 NS_ASSUME_NONNULL_END

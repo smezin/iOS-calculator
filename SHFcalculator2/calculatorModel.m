@@ -24,9 +24,9 @@
         _currentResultString = @"";
         _currentOperator = @"";
         _currentOperaotrIndex = 0;
-        _leftArgument = 0;
-        _rightArgument = 0;
-        _currentResult = 0;
+        _leftArgument = 0.0;
+        _rightArgument = 0.0;
+        _currentResult = 0.0;
     }
     return self;
 }
@@ -34,6 +34,7 @@
 {
     return _equation;
 }
+
 
 +(NSString*) solveEquation:(NSMutableArray*) eqaution
 {
@@ -50,8 +51,23 @@
         [calculate solveSingleOperation];
         [calculate replaceSubEquationWithResult];
     }
+    NSString *trimmedResult = [calculatorModel beautify:[[calculate equation] componentsJoinedByString:@""]];
+   // return [[calculate equation] componentsJoinedByString:@""];
+    return trimmedResult;
+}
 
-    return [[calculate equation] componentsJoinedByString:@""];
++(NSString*) beautify: (NSString*) numberAsString
+{
+    NSUInteger i = [numberAsString length]-1;
+    for (; i >= 0 && [numberAsString characterAtIndex:i] == '0'; i--);
+    
+    if ([numberAsString characterAtIndex:i] == '.')
+        return [numberAsString substringToIndex:i];
+    else
+        return [numberAsString substringToIndex:i+1];
+    
+    return numberAsString;
+    
 }
 -(BOOL) equationContainsOpeartor: (NSString*) operator1 orOperator: (NSString*) operator2
 {

@@ -129,4 +129,12 @@
         _previosOperation = SOLVE;
     }
 }
++(NSString*) beautify: (NSString*) number
+{
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    formatter.maximumFractionDigits = 20;
+
+    return [formatter stringFromNumber:number];
+}
 @end
