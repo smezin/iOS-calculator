@@ -2,11 +2,10 @@
 //  calculatorViewController.m
 //  SHFcalculator2
 //
-//  Created by hyperactive on 19/03/2020.
-//  Copyright © 2020 hyperActive. All rights reserved.
-//
+
 
 #import "calculatorViewController.h"
+#import "calculatorModel.h"
 
 @interface calculatorViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitsDisplayLabel;
@@ -123,12 +122,11 @@
         }
     }
     if (validRequest) {
-        self.digitsDisplayLabel.text = @"0.0"; //solve equation
+        self.digitsDisplayLabel.text = [calculatorModel solveEquation:_equationArray];
         self.equationDisplayLabel.text = [_equationArray componentsJoinedByString:@""];
         _digitsDisplay = @"0";
         [_equationArray removeAllObjects];
         _previosOperation = SOLVE;
     }
 }
-
 @end

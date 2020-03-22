@@ -15,6 +15,7 @@
 		E16E0E4B242388A3003AA2A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E4A242388A3003AA2A3 /* main.m */; };
 		E16E0E54242388DE003AA2A3 /* calculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16E0E52242388DE003AA2A3 /* calculatorViewController.m */; };
 		E16E0E55242388DE003AA2A3 /* calculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16E0E53242388DE003AA2A3 /* calculatorViewController.xib */; };
+		E18A18392427898A00920766 /* calculatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A18382427898A00920766 /* calculatorModel.m */; };
 		E19ADDBE2423C5CB00E4863F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19ADDBC2423C5CB00E4863F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,8 @@
 		E16E0E51242388DE003AA2A3 /* calculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculatorViewController.h; sourceTree = "<group>"; };
 		E16E0E52242388DE003AA2A3 /* calculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculatorViewController.m; sourceTree = "<group>"; };
 		E16E0E53242388DE003AA2A3 /* calculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = calculatorViewController.xib; sourceTree = "<group>"; };
+		E18A18372427898A00920766 /* calculatorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculatorModel.h; sourceTree = "<group>"; };
+		E18A18382427898A00920766 /* calculatorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculatorModel.m; sourceTree = "<group>"; };
 		E19ADDBD2423C5CB00E4863F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +83,8 @@
 				E16E0E51242388DE003AA2A3 /* calculatorViewController.h */,
 				E16E0E52242388DE003AA2A3 /* calculatorViewController.m */,
 				E16E0E53242388DE003AA2A3 /* calculatorViewController.xib */,
+				E18A18372427898A00920766 /* calculatorModel.h */,
+				E18A18382427898A00920766 /* calculatorModel.m */,
 			);
 			path = SHFcalculator2;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				E16E0E402423888A003AA2A3 /* ViewController.m in Sources */,
 				E16E0E3A2423888A003AA2A3 /* AppDelegate.m in Sources */,
 				E16E0E4B242388A3003AA2A3 /* main.m in Sources */,
+				E18A18392427898A00920766 /* calculatorModel.m in Sources */,
 				E16E0E54242388DE003AA2A3 /* calculatorViewController.m in Sources */,
 				E16E0E3D2423888A003AA2A3 /* SceneDelegate.m in Sources */,
 			);
