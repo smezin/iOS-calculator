@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 {
     NSMutableArray *_equation;
     NSInteger _currentOperaotrIndex;
-    NSString *_currentResultString;
+    NSInteger _currentOpenParentheses, _currentCloseParentheses;
+    NSString *_currentResultString, *_subResultString;
     NSString *_currentOperator;
     double _leftArgument, _rightArgument, _currentResult;
 }
@@ -23,11 +24,15 @@ NS_ASSUME_NONNULL_BEGIN
 -(instancetype)initWithEquation: (NSMutableArray*)equation;
 -(NSMutableArray*)equation;
 
-+(NSString*) solveEquation: (NSMutableArray*) eqaution;
+
++(NSString*) solveEquation: (NSMutableArray*) equation;
+-(NSString*) evaluateExpression;
 -(BOOL) extractValuesBeforeAndAfter: (NSString*) operator1 orOperator: (NSString*) operator2;
 -(BOOL) solveSingleOperation;
--(NSMutableArray*) replaceSubEquationWithResult;
--(BOOL) equationContainsOpeartor: (NSString*) operator1 orOperator: (NSString*) operator2;
+-(NSMutableArray*) replaceExpressionWithValue;
+-(BOOL) isEquationContainsOpeartor: (NSString*) operator1 orOperator: (NSString*) operator2;
+-(BOOL) findParenthesesIndexes;
+-(void) replaceSubEquationWithSubResult;
 +(NSString*) beautify: (NSString*) numberAsString;
 @end
 

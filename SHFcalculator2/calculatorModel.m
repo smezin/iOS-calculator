@@ -22,8 +22,11 @@
     {
         _equation = [NSMutableArray arrayWithArray:equation];
         _currentResultString = @"";
+        _subResultString = @"";
         _currentOperator = @"";
         _currentOperaotrIndex = 0;
+        _currentOpenParentheses = 0;
+        _currentCloseParentheses = 0;
         _leftArgument = 0.0;
         _rightArgument = 0.0;
         _currentResult = 0.0;
@@ -34,24 +37,73 @@
 {
     return _equation;
 }
-
-+(NSString*) solveEquation:(NSMutableArray*) eqaution
++(NSString*) solveEquation: (NSMutableArray*) equation
 {
-    calculatorModel *calculate = [[calculatorModel alloc]initWithEquation:eqaution];
-    while ([calculate equationContainsOpeartor:@"x" orOperator:@"/"])
+    calculatorModel *calculate = [[calculatorModel alloc]initWithEquation:equation];
+    NSString *pp = [calculate solveSubEquations];
+    return [calculate solveSubEquations];
+    
+}
+
+-(NSString*) solveSubEquations
+{
+    if (![self findParenthesesIndexes])
+        return [self evaluateExpression];
+    else
     {
-        [calculate extractValuesBeforeAndAfter:@"x" orOperator:@"/"];
-        if (![calculate solveSingleOperation])
+        [self findParenthesesIndexes];
+        NSMutableArray *subEquation = [[NSMutableArray alloc]init];
+        for (NSInteger i = _currentOpenParentheses + 1; i < _currentCloseParentheses; i++)
+            [subEquation addObject:_equation[i]];
+        calculatorModel *subCalculation = [[calculatorModel alloc]initWithEquation:subEquation];
+        _subResultString = [subCalculation evaluateExpression];
+        [self replaceSubEquationWithSubResult];
+        return [self solveSubEquations];
+    }
+}
+
+-(void) replaceSubEquationWithSubResult
+{
+    [_equation replaceObjectAtIndex:_currentOpenParentheses withObject:_subResultString];
+    for (NSInteger i =_currentCloseParentheses; i > _currentOpenParentheses; i--)
+         [_equation removeObjectAtIndex:i];
+}
+
+-(BOOL) findParenthesesIndexes
+{
+    BOOL isFound = NO;
+    for (NSInteger i = [_equation count] - 1; i >= 0; i--)
+        if ([_equation[i] isEqualToString:@"("])
+        {
+            _currentOpenParentheses = i;
+            isFound = YES;
+        }
+    for (NSInteger i = _currentOpenParentheses; i < [_equation count]; i++)
+        if ([_equation[i] isEqualToString:@")"])
+        {
+            _currentCloseParentheses = i;
+            return isFound;
+        }
+    return isFound;
+}
+
+
+-(NSString*) evaluateExpression
+{
+    while ([self isEquationContainsOpeartor:@"x" orOperator:@"/"])
+    {
+        [self extractValuesBeforeAndAfter:@"x" orOperator:@"/"];
+        if (![self solveSingleOperation])
             return @"DIV/0 Error";
-        [calculate replaceSubEquationWithResult];
+        [self replaceExpressionWithValue];
     }
-    while ([calculate equationContainsOpeartor:@"+" orOperator:@"-"])
+    while ([self isEquationContainsOpeartor:@"+" orOperator:@"-"])
     {
-        [calculate extractValuesBeforeAndAfter:@"+" orOperator:@"-"];
-        [calculate solveSingleOperation];
-        [calculate replaceSubEquationWithResult];
+        [self extractValuesBeforeAndAfter:@"+" orOperator:@"-"];
+        [self solveSingleOperation];
+        [self replaceExpressionWithValue];
     }
-    NSString *trimmedResult = [calculatorModel beautify:[[calculate equation] componentsJoinedByString:@""]];
+    NSString *trimmedResult = [calculatorModel beautify:[[self equation] componentsJoinedByString:@""]];
     return trimmedResult;
 }
 
@@ -68,7 +120,7 @@
     return numberAsString;
     
 }
--(BOOL) equationContainsOpeartor: (NSString*) operator1 orOperator: (NSString*) operator2
+-(BOOL) isEquationContainsOpeartor: (NSString*) operator1 orOperator: (NSString*) operator2
 {
     for (NSInteger i = 0; i < [_equation count]; i++)
         if ([_equation[i] isEqualToString:operator1] || [_equation[i] isEqualToString:operator2])
@@ -76,7 +128,7 @@
     return NO;
 }
 
--(NSMutableArray*) replaceSubEquationWithResult
+-(NSMutableArray*) replaceExpressionWithValue
 {
     [_equation replaceObjectAtIndex:_currentOperaotrIndex withObject:_currentResultString];
     [_equation removeObjectAtIndex:_currentOperaotrIndex + 1];

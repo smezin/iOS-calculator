@@ -114,7 +114,6 @@
         validRequest = YES;
     }
     if (_previosOperation == CLOSE_PARENTHESES) {
-        [_equationArray addObject:@")"];
         validRequest = YES;
     }
     if (validRequest && _numberOfUnclosedParenthesis > 0) {
@@ -123,12 +122,12 @@
         }
     }
     if (validRequest) {
-        self.digitsDisplayLabel.text = [calculatorModel solveEquation:_equationArray];
+        NSString *equationResult = [calculatorModel solveEquation:_equationArray];
+        self.digitsDisplayLabel.text = equationResult;
         self.equationDisplayLabel.text = [_equationArray componentsJoinedByString:@""];
         _digitsDisplay = @"0";
         [_equationArray removeAllObjects];
         _previosOperation = SOLVE;
     }
 }
-
 @end
