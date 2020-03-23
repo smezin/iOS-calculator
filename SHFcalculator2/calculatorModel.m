@@ -40,7 +40,6 @@
 +(NSString*) solveEquation: (NSMutableArray*) equation
 {
     calculatorModel *calculate = [[calculatorModel alloc]initWithEquation:equation];
-    NSString *pp = [calculate solveSubEquations];
     return [calculate solveSubEquations];
     
 }
@@ -72,17 +71,18 @@
 -(BOOL) findParenthesesIndexes
 {
     BOOL isFound = NO;
-    for (NSInteger i = [_equation count] - 1; i >= 0; i--)
+    for (NSInteger i = [_equation count] - 1; i >= 0 && !isFound; i--)
         if ([_equation[i] isEqualToString:@"("])
         {
             _currentOpenParentheses = i;
             isFound = YES;
         }
-    for (NSInteger i = _currentOpenParentheses; i < [_equation count]; i++)
+    isFound = NO;
+    for (NSInteger i = _currentOpenParentheses; i < [_equation count] && !isFound; i++)
         if ([_equation[i] isEqualToString:@")"])
         {
             _currentCloseParentheses = i;
-            return isFound;
+            isFound = YES;
         }
     return isFound;
 }
