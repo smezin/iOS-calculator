@@ -139,7 +139,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIZ-qj-ens">
-                    <rect key="frame" x="55" y="630" width="148" height="70"/>
+                    <rect key="frame" x="55" y="630" width="148" height="68"/>
                     <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="0" label="numberKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
@@ -177,8 +177,8 @@
                         <action selector="clear:" destination="-1" eventType="touchUpInside" id="eJ9-LM-B6H"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OA-Wb-81Q">
-                    <rect key="frame" x="133" y="318" width="70" height="66"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OA-Wb-81Q">
+                    <rect key="frame" x="133" y="318" width="70" height="70"/>
                     <color key="backgroundColor" red="0.0021603829204377631" green="0.25376457256994811" blue="0.010256511356716761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="(" label="parenthesesKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
@@ -189,8 +189,8 @@
                         <action selector="openParentheses:" destination="-1" eventType="touchUpInside" id="Bgp-wd-dHv"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN7-no-da6">
-                    <rect key="frame" x="211" y="318" width="70" height="66"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN7-no-da6">
+                    <rect key="frame" x="211" y="318" width="70" height="70"/>
                     <color key="backgroundColor" red="0.0021603829204377631" green="0.25376457256994811" blue="0.010256511356716761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier=")" label="parenthesesKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
@@ -202,7 +202,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KN-vC-d7K">
-                    <rect key="frame" x="289" y="630" width="70" height="70"/>
+                    <rect key="frame" x="289" y="630" width="70" height="68"/>
                     <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="=" label="solveKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
@@ -252,8 +252,8 @@
                         <action selector="operators:" destination="-1" eventType="touchUpInside" id="tQT-Hd-vGa"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiC-B0-QtL">
-                    <rect key="frame" x="289" y="318" width="70" height="68"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiC-B0-QtL">
+                    <rect key="frame" x="289" y="318" width="70" height="70"/>
                     <color key="backgroundColor" red="0.15768987679999999" green="0.2383053752" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="/" label="operatorKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
@@ -346,7 +346,6 @@
                 <constraint firstItem="V6y-NG-Fcf" firstAttribute="top" secondItem="Eja-4Q-YSM" secondAttribute="bottom" constant="7" id="dUV-6F-Pqf"/>
                 <constraint firstItem="iN7-no-da6" firstAttribute="leading" secondItem="neF-z4-EUA" secondAttribute="leading" id="dWq-Ad-2Ht"/>
                 <constraint firstItem="Txh-BV-PAn" firstAttribute="trailing" secondItem="2OA-Wb-81Q" secondAttribute="trailing" id="dtc-c8-h1J"/>
-                <constraint firstItem="neF-z4-EUA" firstAttribute="baseline" secondItem="0KN-vC-d7K" secondAttribute="baseline" id="e6G-sU-h2P"/>
                 <constraint firstItem="V6y-NG-Fcf" firstAttribute="leading" secondItem="zmo-df-QrC" secondAttribute="leading" id="eV4-z7-N5e"/>
                 <constraint firstItem="iN7-no-da6" firstAttribute="trailing" secondItem="5GX-ec-uOt" secondAttribute="trailing" id="fQa-xO-bGe"/>
                 <constraint firstItem="Txh-BV-PAn" firstAttribute="trailing" secondItem="lIZ-qj-ens" secondAttribute="trailing" id="h7S-LE-2UK"/>
