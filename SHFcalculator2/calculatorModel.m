@@ -1,7 +1,7 @@
 //
 //  calculatorModel.m
 //  SHFcalculator2
-//
+
 
 #import "calculatorModel.h"
 
