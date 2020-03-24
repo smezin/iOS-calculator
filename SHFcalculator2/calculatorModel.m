@@ -103,11 +103,11 @@
         [self solveSingleOperation];
         [self replaceExpressionWithValue];
     }
-    NSString *trimmedResult = [calculatorModel beautify:[[self equation] componentsJoinedByString:@""]];
+    NSString *trimmedResult = [calculatorModel cutTrainlingZeros:[[self equation] componentsJoinedByString:@""]];
     return trimmedResult;
 }
 
-+(NSString*) beautify: (NSString*) numberAsString //cut trailing 0's
++(NSString*) cutTrainlingZeros: (NSString*) numberAsString 
 {
     NSUInteger i = [numberAsString length]-1;
     for (; i >= 0 && [numberAsString characterAtIndex:i] == '0'; i--);
@@ -172,6 +172,4 @@
     _currentResultString = [NSString stringWithFormat:@"%.6f", _currentResult];
     return YES;
 }
-
-
 @end

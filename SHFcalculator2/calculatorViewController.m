@@ -26,14 +26,14 @@
 
 -(IBAction)numbers:(id)sender
 {
-    UIButton *keyP = (UIButton*)sender;
+    UIButton *keyTouched = (UIButton*)sender;
     if (_previosOperation == NUMBRES || _previosOperation == PERIOD)
     {
         if ([_digitsDisplay isEqualToString:@"0"])
             _digitsDisplay = @"";
-        _digitsDisplay = [_digitsDisplay stringByAppendingString:keyP.currentTitle];
+        _digitsDisplay = [_digitsDisplay stringByAppendingString:keyTouched.currentTitle];
     } else {
-        _digitsDisplay = keyP.currentTitle;
+        _digitsDisplay = keyTouched.currentTitle;
     }
     self.digitsDisplayLabel.text = _digitsDisplay;
     self.equationDisplayLabel.text = [_equationArray componentsJoinedByString:@""];
@@ -43,7 +43,7 @@
 {
     UIButton *operatorButton = (UIButton*)sender;
     NSString *operator = operatorButton.currentTitle;
-    if (_previosOperation == NUMBRES) {
+    if (_previosOperation == NUMBRES || _previosOperation == SOLVE) {
         [_equationArray addObject:_digitsDisplay];
         [_equationArray addObject:operator];
         _decimalPeriodInEffect = NO;
@@ -55,6 +55,7 @@
         [_equationArray addObject:operator];
         _previosOperation = OPERATORS;
     }
+    
     self.equationDisplayLabel.text = [_equationArray componentsJoinedByString:@""];
 }
 
@@ -125,7 +126,7 @@
         NSString *equationResult = [calculatorModel solveEquation:_equationArray];
         self.digitsDisplayLabel.text = equationResult;
         self.equationDisplayLabel.text = [_equationArray componentsJoinedByString:@""];
-        _digitsDisplay = @"0";
+        _digitsDisplay = equationResult;
         [_equationArray removeAllObjects];
         _previosOperation = SOLVE;
     }

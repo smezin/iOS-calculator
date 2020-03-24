@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(BOOL) isEquationContainsOpeartor: (NSString*) operator1 orOperator: (NSString*) operator2;
 -(BOOL) findParenthesesIndexes;
 -(void) replaceSubEquationWithSubResult;
-+(NSString*) beautify: (NSString*) numberAsString;
++(NSString*) cutTrainlingZeros: (NSString*) numberAsString;
 @end
 
 NS_ASSUME_NONNULL_END
