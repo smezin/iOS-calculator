@@ -54,8 +54,7 @@
     } else if (_previosOperation == CLOSE_PARENTHESES) {
         [_equationArray addObject:operator];
         _previosOperation = OPERATORS;
-    }
-    
+    }    
     self.equationDisplayLabel.text = [_equationArray componentsJoinedByString:@""];
 }
 
@@ -121,6 +120,7 @@
         for (int i=0; i<_numberOfUnclosedParenthesis; i++){
             [_equationArray addObject:@")"];
         }
+        _numberOfUnclosedParenthesis = 0;
     }
     if (validRequest) {
         NSString *equationResult = [calculatorModel solveEquation:_equationArray];

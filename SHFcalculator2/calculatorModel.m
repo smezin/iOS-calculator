@@ -2,9 +2,6 @@
 //  calculatorModel.m
 //  SHFcalculator2
 //
-//  Created by hyperactive on 22/03/2020.
-//  Copyright © 2020 hyperActive. All rights reserved.
-//
 
 #import "calculatorModel.h"
 
@@ -87,9 +84,10 @@
     return isFound;
 }
 
-
--(NSString*) evaluateExpression
+-(NSString*) evaluateExpression 
 {
+    if ([_equation count] == 1)
+        return _equation[0];
     while ([self isEquationContainsOpeartor:@"x" orOperator:@"/"])
     {
         [self extractValuesBeforeAndAfter:@"x" orOperator:@"/"];
@@ -103,11 +101,11 @@
         [self solveSingleOperation];
         [self replaceExpressionWithValue];
     }
-    NSString *trimmedResult = [calculatorModel cutTrainlingZeros:[[self equation] componentsJoinedByString:@""]];
+    NSString *trimmedResult = [calculatorModel cutTrailingZeros:[[self equation] componentsJoinedByString:@""]];
     return trimmedResult;
 }
 
-+(NSString*) cutTrainlingZeros: (NSString*) numberAsString 
++(NSString*) cutTrailingZeros: (NSString*) numberAsString 
 {
     NSUInteger i = [numberAsString length]-1;
     for (; i >= 0 && [numberAsString characterAtIndex:i] == '0'; i--);

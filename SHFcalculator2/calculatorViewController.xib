@@ -279,7 +279,7 @@
                     <rect key="frame" x="55" y="209" width="304" height="87"/>
                     <color key="backgroundColor" red="0.97795742750000003" green="0.99032872920000004" blue="0.7086433768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="equation" label="equationLabel"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
