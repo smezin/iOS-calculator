@@ -1,8 +1,6 @@
 //
 //  calculatorViewController.m
 //  SHFcalculator2
-//
-
 
 #import "calculatorViewController.h"
 #import "calculatorModel.h"
@@ -16,7 +14,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     _previosOperation = SOLVE;
     _digitsDisplay = @"0";
     _equationArray = [NSMutableArray array];

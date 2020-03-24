@@ -1,10 +1,6 @@
 //
 //  calculatorViewController.h
 //  SHFcalculator2
-//
-//  Created by hyperactive on 19/03/2020.
-//  Copyright © 2020 hyperActive. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 
@@ -33,8 +29,5 @@ enum keyType
 -(IBAction)solve:(id)sender;
 
 @end
-
-
-
 
 NS_ASSUME_NONNULL_END
