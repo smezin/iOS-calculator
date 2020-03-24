@@ -53,6 +53,12 @@
             [subEquation addObject:_equation[i]];
         calculatorModel *subCalculation = [[calculatorModel alloc]initWithEquation:subEquation];
         _subResultString = [subCalculation evaluateExpression];
+        if ([_subResultString isEqualToString:@"DIV/0 Error"])
+        {
+            [_equation removeAllObjects];
+            [_equation addObject:@"DIV/0 Error"];
+            return @"DIV/0 Error";
+        }
         [self replaceSubEquationWithSubResult];
         return [self solveSubEquations];
     }
@@ -88,6 +94,7 @@
 {
     if ([_equation count] == 1)
         return _equation[0];
+    
     while ([self isEquationContainsOpeartor:@"x" orOperator:@"/"])
     {
         [self extractValuesBeforeAndAfter:@"x" orOperator:@"/"];
