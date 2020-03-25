@@ -20,13 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 -(instancetype)initWithEquation: (NSMutableArray*)equation;
 -(NSMutableArray*)equation;
 
-
 +(NSString*) solveEquation: (NSMutableArray*) equation;
 -(NSString*) evaluateExpression;
 -(BOOL) extractValuesBeforeAndAfter: (NSString*) operator1 orOperator: (NSString*) operator2;
 -(BOOL) solveSingleOperation;
 -(NSMutableArray*) replaceExpressionWithValue;
--(BOOL) isEquationContainsOpeartor: (NSString*) operator1 orOperator: (NSString*) operator2;
 -(BOOL) findParenthesesIndexes;
 -(void) replaceSubEquationWithSubResult;
 +(NSString*) cutTrailingZeros: (NSString*) numberAsString;

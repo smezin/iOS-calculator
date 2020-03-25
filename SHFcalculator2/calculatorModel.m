@@ -31,7 +31,6 @@
     return self;
 }
 
-
 +(NSString*) solveEquation: (NSMutableArray*) equation
 {
     calculatorModel *calculate = [[calculatorModel alloc]initWithEquation:equation];
@@ -62,81 +61,24 @@
     }
 }
 
--(void) replaceSubEquationWithSubResult
-{
-    [_equation replaceObjectAtIndex:_currentOpenParentheses withObject:_subResultString];
-    for (NSInteger i =_currentCloseParentheses; i > _currentOpenParentheses; i--)
-         [_equation removeObjectAtIndex:i];
-}
-
--(BOOL) findParenthesesIndexes
-{
-    BOOL isFound = NO;
-    for (NSInteger i = [_equation count] - 1; i >= 0 && !isFound; i--)
-        if ([_equation[i] isEqualToString:@"("])
-        {
-            _currentOpenParentheses = i;
-            isFound = YES;
-        }
-    isFound = NO;
-    for (NSInteger i = _currentOpenParentheses; i < [_equation count] && !isFound; i++)
-        if ([_equation[i] isEqualToString:@")"])
-        {
-            _currentCloseParentheses = i;
-            isFound = YES;
-        }
-    return isFound;
-}
-
--(NSString*) evaluateExpression 
+-(NSString*) evaluateExpression
 {
     if ([_equation count] == 1)
         return _equation[0];
     
-    while ([self isEquationContainsOpeartor:@"x" orOperator:@"/"])
+    while ([self extractValuesBeforeAndAfter:@"x" orOperator:@"/"])
     {
-        [self extractValuesBeforeAndAfter:@"x" orOperator:@"/"];
         if (![self solveSingleOperation])
             return @"DIV/0 Error";
         [self replaceExpressionWithValue];
     }
-    while ([self isEquationContainsOpeartor:@"+" orOperator:@"-"])
+    while ([self extractValuesBeforeAndAfter:@"+" orOperator:@"-"])
     {
-        [self extractValuesBeforeAndAfter:@"+" orOperator:@"-"];
         [self solveSingleOperation];
         [self replaceExpressionWithValue];
     }
     NSString *trimmedResult = [calculatorModel cutTrailingZeros:[[self equation] componentsJoinedByString:@""]];
     return trimmedResult;
-}
-
-+(NSString*) cutTrailingZeros: (NSString*) numberAsString 
-{
-    NSUInteger i = [numberAsString length]-1;
-    for (; i >= 0 && [numberAsString characterAtIndex:i] == '0'; i--);
-    
-    if ([numberAsString characterAtIndex:i] == '.')
-        return [numberAsString substringToIndex:i];
-    else
-        return [numberAsString substringToIndex:i+1];
-    
-    return numberAsString;
-    
-}
--(BOOL) isEquationContainsOpeartor: (NSString*) operator1 orOperator: (NSString*) operator2
-{
-    for (NSInteger i = 0; i < [_equation count]; i++)
-        if ([_equation[i] isEqualToString:operator1] || [_equation[i] isEqualToString:operator2])
-            return YES;
-    return NO;
-}
-
--(NSMutableArray*) replaceExpressionWithValue
-{
-    [_equation replaceObjectAtIndex:_currentOperaotrIndex withObject:_currentResultString];
-    [_equation removeObjectAtIndex:_currentOperaotrIndex + 1];
-    [_equation removeObjectAtIndex:_currentOperaotrIndex - 1];
-    return _equation;
 }
 
 -(BOOL) extractValuesBeforeAndAfter: (NSString*) operator1 orOperator: (NSString*) operator2
@@ -174,5 +116,52 @@
         return NO;
     _currentResultString = [NSString stringWithFormat:@"%.6f", _currentResult];
     return YES;
+}
+
+-(void) replaceSubEquationWithSubResult
+{
+    [_equation replaceObjectAtIndex:_currentOpenParentheses withObject:_subResultString];
+    for (NSInteger i =_currentCloseParentheses; i > _currentOpenParentheses; i--)
+         [_equation removeObjectAtIndex:i];
+}
+
+-(BOOL) findParenthesesIndexes
+{
+    BOOL isFound = NO;
+    for (NSInteger i = [_equation count] - 1; i >= 0 && !isFound; i--)
+        if ([_equation[i] isEqualToString:@"("])
+        {
+            _currentOpenParentheses = i;
+            isFound = YES;
+        }
+    isFound = NO;
+    for (NSInteger i = _currentOpenParentheses; i < [_equation count] && !isFound; i++)
+        if ([_equation[i] isEqualToString:@")"])
+        {
+            _currentCloseParentheses = i;
+            isFound = YES;
+        }
+    return isFound;
+}
+
+-(NSMutableArray*) replaceExpressionWithValue
+{
+    [_equation replaceObjectAtIndex:_currentOperaotrIndex withObject:_currentResultString];
+    [_equation removeObjectAtIndex:_currentOperaotrIndex + 1];
+    [_equation removeObjectAtIndex:_currentOperaotrIndex - 1];
+    return _equation;
+}
+
++(NSString*) cutTrailingZeros: (NSString*) numberAsString
+{
+    NSUInteger i = [numberAsString length]-1;
+    for (; i >= 0 && [numberAsString characterAtIndex:i] == '0'; i--);
+    
+    if ([numberAsString characterAtIndex:i] == '.')
+        return [numberAsString substringToIndex:i];
+    else
+        return [numberAsString substringToIndex:i+1];
+    
+    return numberAsString;    
 }
 @end
