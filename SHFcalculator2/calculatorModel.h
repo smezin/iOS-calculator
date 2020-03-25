@@ -7,14 +7,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface calculatorModel : NSObject
-{
-    NSMutableArray *_equation;
-    NSInteger _currentOperaotrIndex;
-    NSInteger _currentOpenParentheses, _currentCloseParentheses;
-    NSString *_currentResultString, *_subResultString;
-    NSString *_currentOperator;
-    double _leftArgument, _rightArgument, _currentResult;
-}
+
+@property NSMutableArray *equation;
+@property NSInteger currentOperaotrIndex;
+@property NSInteger currentOpenParentheses, currentCloseParentheses;
+@property NSString *currentResultString, *subResultString;
+@property NSString *currentOperator;
+@property double leftArgument, rightArgument, currentResult;
+
 
 -(instancetype)init;
 -(instancetype)initWithEquation: (NSMutableArray*)equation;

@@ -30,10 +30,8 @@
     }
     return self;
 }
--(NSMutableArray*)equation
-{
-    return _equation;
-}
+
+
 +(NSString*) solveEquation: (NSMutableArray*) equation
 {
     calculatorModel *calculate = [[calculatorModel alloc]initWithEquation:equation];

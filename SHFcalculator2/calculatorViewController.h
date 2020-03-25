@@ -12,13 +12,13 @@ enum keyType
 };
 
 @interface calculatorViewController : UIViewController
-{
-    NSString *_digitsDisplay;
-    NSMutableArray *_equationArray;
-    enum keyType _previosOperation;
-    BOOL _decimalPeriodInEffect;
-    int _numberOfUnclosedParenthesis;    
-}
+
+@property NSString*digitsDisplay;
+@property NSMutableArray *equationArray;
+@property enum keyType previosOperation;
+@property BOOL decimalPeriodInEffect;
+@property int numberOfUnclosedParenthesis;
+
 
 -(IBAction)numbers:(id)sender;
 -(IBAction)operators:(id)sender;
