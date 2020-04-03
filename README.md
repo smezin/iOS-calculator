@@ -1,4 +1,4 @@
-# iOS-calculator
+# iOS-calculator for iPhone 11 pro max
 This is an objective C equation calculator.
 
 Fuctionality:
