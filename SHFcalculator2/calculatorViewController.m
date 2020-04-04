@@ -91,8 +91,8 @@
         _previosOperation = CLEAR;
     }
     self.digitsDisplayLabel.text = _digitsDisplay;
-    
 }
+
 -(IBAction)peiod:(id)sender
 {
     if (_decimalPeriodInEffect == NO && _previosOperation == NUMBRES)
@@ -103,6 +103,7 @@
     self.digitsDisplayLabel.text = _digitsDisplay;
     _previosOperation = PERIOD;
 }
+
 -(IBAction)solve:(id)sender
 {
     BOOL validRequest = NO;
