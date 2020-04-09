@@ -47,14 +47,14 @@ NSString const *divByZeroErrorMsg=@"DIV/0 Error";
     {
         [self findParenthesesIndexes];
         NSMutableArray *subEquation = [[NSMutableArray alloc]init];
-        for (NSInteger i = _currentOpenParentheses + 1; i < _currentCloseParentheses; i++)
-            [subEquation addObject:_equation[i]];
+        for (NSInteger i = self.currentOpenParentheses + 1; i < self.currentCloseParentheses; i++)
+            [subEquation addObject:self.equation[i]];
         calculatorModel *subCalculation = [[calculatorModel alloc]initWithEquation:subEquation];
-        _subResultString = [subCalculation evaluateExpression];
-        if ([_subResultString isEqualToString:(NSString*)divByZeroErrorMsg])
+        self.subResultString = [subCalculation evaluateExpression];
+        if ([self.subResultString isEqualToString:(NSString*)divByZeroErrorMsg])
         {
-            [_equation removeAllObjects];
-            [_equation addObject:divByZeroErrorMsg];
+            [self.equation removeAllObjects];
+            [self.equation addObject:divByZeroErrorMsg];
             return (NSString*)divByZeroErrorMsg;
         }
         [self replaceSubEquationWithSubResult];
@@ -64,8 +64,8 @@ NSString const *divByZeroErrorMsg=@"DIV/0 Error";
 
 -(NSString*) evaluateExpression
 {
-    if ([_equation count] == 1)
-        return _equation[0];
+    if ([self.equation count] == 1)
+        return self.equation[0];
     
     while ([self extractValuesBeforeAndAfter:@"x" orOperator:@"/"])
     {
@@ -84,14 +84,14 @@ NSString const *divByZeroErrorMsg=@"DIV/0 Error";
 
 -(BOOL) extractValuesBeforeAndAfter: (NSString*) operator1 orOperator: (NSString*) operator2
 {
-    for (NSInteger i = 0; i < [_equation count]; i++)
+    for (NSInteger i = 0; i < [self.equation count]; i++)
     {
-        if ([_equation[i] isEqualToString:operator1] || [_equation[i] isEqualToString:operator2])
+        if ([self.equation[i] isEqualToString:operator1] || [self.equation[i] isEqualToString:operator2])
         {
-            _currentOperaotrIndex = i;
-            _currentOperator = _equation[i];
-            _leftArgument = [_equation[i-1] doubleValue];
-            _rightArgument = [_equation[i+1] doubleValue];
+            self.currentOperaotrIndex = i;
+            self.currentOperator = self.equation[i];
+            self.leftArgument = [self.equation[i-1] doubleValue];
+            self.rightArgument = [self.equation[i+1] doubleValue];
             return YES;
         }
     }
@@ -100,46 +100,46 @@ NSString const *divByZeroErrorMsg=@"DIV/0 Error";
 
 -(BOOL) solveSingleOperation
 {
-    if ([_currentOperator isEqualToString:@"+"])
-        _currentResult = _leftArgument + _rightArgument;
-    else if ([_currentOperator isEqualToString:@"-"])
-        _currentResult = _leftArgument - _rightArgument;
-    else if ([_currentOperator isEqualToString:@"x"])
-        _currentResult = _leftArgument * _rightArgument;
-    else if ([_currentOperator isEqualToString:@"/"])
+    if ([self.currentOperator isEqualToString:@"+"])
+        self.currentResult = self.leftArgument + self.rightArgument;
+    else if ([self.currentOperator isEqualToString:@"-"])
+        self.currentResult = self.leftArgument - self.rightArgument;
+    else if ([self.currentOperator isEqualToString:@"x"])
+        self.currentResult = self.leftArgument * self.rightArgument;
+    else if ([self.currentOperator isEqualToString:@"/"])
     {
-        if (_rightArgument == 0)
+        if (self.rightArgument == 0)
             return NO;
         else
-            _currentResult = _leftArgument / _rightArgument;
+            self.currentResult = self.leftArgument / self.rightArgument;
     }
     else
         return NO;
-    _currentResultString = [NSString stringWithFormat:@"%.6f", _currentResult];
+    self.currentResultString = [NSString stringWithFormat:@"%.6f", self.currentResult];
     return YES;
 }
 
 -(void) replaceSubEquationWithSubResult
 {
-    [_equation replaceObjectAtIndex:_currentOpenParentheses withObject:_subResultString];
-    for (NSInteger i =_currentCloseParentheses; i > _currentOpenParentheses; i--)
-         [_equation removeObjectAtIndex:i];
+    [self.equation replaceObjectAtIndex:self.currentOpenParentheses withObject:self.subResultString];
+    for (NSInteger i =self.currentCloseParentheses; i > self.currentOpenParentheses; i--)
+         [self.equation removeObjectAtIndex:i];
 }
 
 -(BOOL) findParenthesesIndexes
 {
     BOOL isFound = NO;
-    for (NSInteger i = [_equation count] - 1; i >= 0 && !isFound; i--)
-        if ([_equation[i] isEqualToString:@"("])
+    for (NSInteger i = [self.equation count] - 1; i >= 0 && !isFound; i--)
+        if ([self.equation[i] isEqualToString:@"("])
         {
-            _currentOpenParentheses = i;
+            self.currentOpenParentheses = i;
             isFound = YES;
         }
     isFound = NO;
-    for (NSInteger i = _currentOpenParentheses; i < [_equation count] && !isFound; i++)
-        if ([_equation[i] isEqualToString:@")"])
+    for (NSInteger i = self.currentOpenParentheses; i < [self.equation count] && !isFound; i++)
+        if ([self.equation[i] isEqualToString:@")"])
         {
-            _currentCloseParentheses = i;
+            self.currentCloseParentheses = i;
             isFound = YES;
         }
     return isFound;
@@ -147,10 +147,10 @@ NSString const *divByZeroErrorMsg=@"DIV/0 Error";
 
 -(NSMutableArray*) replaceExpressionWithValue
 {
-    [_equation replaceObjectAtIndex:_currentOperaotrIndex withObject:_currentResultString];
-    [_equation removeObjectAtIndex:_currentOperaotrIndex + 1];
-    [_equation removeObjectAtIndex:_currentOperaotrIndex - 1];
-    return _equation;
+    [self.equation replaceObjectAtIndex:self.currentOperaotrIndex withObject:self.currentResultString];
+    [self.equation removeObjectAtIndex:self.currentOperaotrIndex + 1];
+    [self.equation removeObjectAtIndex:self.currentOperaotrIndex - 1];
+    return self.equation;
 }
 
 +(NSString*) cutTrailingZeros: (NSString*) numberAsString
