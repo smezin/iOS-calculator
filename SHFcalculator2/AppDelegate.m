@@ -24,7 +24,6 @@
     calculatorViewController *calcVC = [[calculatorViewController alloc]init];
     self.window.rootViewController = calcVC;
     
-    self.window.backgroundColor = [UIColor redColor];
     [self.window makeKeyWindow];
 
     return YES;

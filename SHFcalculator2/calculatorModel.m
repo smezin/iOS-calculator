@@ -6,6 +6,7 @@
 #import "calculatorModel.h"
 
 @implementation calculatorModel
+NSString const *divByZeroErrorMsg=@"DIV/0 Error";
 -(instancetype)init
 {
     NSMutableArray *equation;
@@ -50,11 +51,11 @@
             [subEquation addObject:_equation[i]];
         calculatorModel *subCalculation = [[calculatorModel alloc]initWithEquation:subEquation];
         _subResultString = [subCalculation evaluateExpression];
-        if ([_subResultString isEqualToString:@"DIV/0 Error"])
+        if ([_subResultString isEqualToString:(NSString*)divByZeroErrorMsg])
         {
             [_equation removeAllObjects];
-            [_equation addObject:@"DIV/0 Error"];
-            return @"DIV/0 Error";
+            [_equation addObject:divByZeroErrorMsg];
+            return (NSString*)divByZeroErrorMsg;
         }
         [self replaceSubEquationWithSubResult];
         return [self solveSubEquations];
@@ -69,7 +70,7 @@
     while ([self extractValuesBeforeAndAfter:@"x" orOperator:@"/"])
     {
         if (![self solveSingleOperation])
-            return @"DIV/0 Error";
+            return (NSString*)divByZeroErrorMsg;
         [self replaceExpressionWithValue];
     }
     while ([self extractValuesBeforeAndAfter:@"+" orOperator:@"-"])

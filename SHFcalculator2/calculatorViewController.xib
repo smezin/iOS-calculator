@@ -18,77 +18,85 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiO-Wr-KFo">
+                    <rect key="frame" x="33" y="124" width="343" height="642"/>
+                    <color key="backgroundColor" red="0.17924898445915061" green="0.17924898445915061" blue="0.17924898445915061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esx-n9-3sJ">
-                    <rect key="frame" x="55" y="318" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.60476036269430056" green="0.35376121545555461" blue="0.0011703598188596627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="60" y="360" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="c" label="clearKey"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="70" id="Ms8-HZ-i3B"/>
-                        <constraint firstAttribute="height" constant="70" id="l7A-Ae-okD"/>
+                        <constraint firstAttribute="width" constant="70" id="MZO-kd-bAU"/>
+                        <constraint firstAttribute="height" constant="70" id="f2A-Hh-pIP"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="42"/>
                     <state key="normal" title="C">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="clear:" destination="-1" eventType="touchUpInside" id="eJ9-LM-B6H"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OA-Wb-81Q">
-                    <rect key="frame" x="133" y="318" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.0021603829204377631" green="0.25376457256994811" blue="0.010256511356716761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="133" y="360" width="70" height="70"/>
+                    <color key="backgroundColor" red="0.89552299222797926" green="0.52384600866956055" blue="0.0017330569124921231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="(" label="parenthesesKey"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="70" id="Duu-ZF-q7h"/>
+                        <constraint firstAttribute="width" constant="70" id="LQD-UW-WOS"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="(">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="openParentheses:" destination="-1" eventType="touchUpInside" id="Bgp-wd-dHv"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN7-no-da6">
-                    <rect key="frame" x="211" y="318" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.0021603829204377631" green="0.25376457256994811" blue="0.010256511356716761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="206" y="360" width="70" height="70"/>
+                    <color key="backgroundColor" red="0.89552299222797926" green="0.52384600866956055" blue="0.0017330569124921231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier=")" label="parenthesesKey"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="70" id="oZw-VS-iV1"/>
+                        <constraint firstAttribute="width" constant="70" id="K4O-Q0-tsK"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title=")">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="closeParentheses:" destination="-1" eventType="touchUpInside" id="KWw-4G-7gw"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiC-B0-QtL">
-                    <rect key="frame" x="289" y="318" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.15768987679999999" green="0.2383053752" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiC-B0-QtL">
+                    <rect key="frame" x="279" y="360" width="70" height="70"/>
+                    <color key="backgroundColor" red="0.89552299222797926" green="0.52384600866956055" blue="0.0017330569124921231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="/" label="operatorKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="/">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="operators:" destination="-1" eventType="touchUpInside" id="TXi-uw-zBW"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42X-jQ-Mxl">
-                    <rect key="frame" x="55" y="137" width="304" height="57"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42X-jQ-Mxl">
+                    <rect key="frame" x="60" y="179" width="289" height="57"/>
                     <color key="backgroundColor" red="0.97739161920644835" green="1" blue="0.70779335969497537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="currentNumber" label="currentNumberLabel"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="57" id="A2I-2r-RP6"/>
+                        <constraint firstAttribute="height" constant="57" id="OvS-nl-WRD"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmo-df-QrC">
-                    <rect key="frame" x="55" y="209" width="304" height="87"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmo-df-QrC">
+                    <rect key="frame" x="60" y="251" width="289" height="87"/>
                     <color key="backgroundColor" red="0.97795742750000003" green="0.99032872920000004" blue="0.7086433768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="equation" label="equationLabel"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -96,284 +104,291 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6y-NG-Fcf">
-                    <rect key="frame" x="55" y="554" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="60" y="579" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="1" label="numberKey"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="70" id="cde-Y2-xxZ"/>
+                        <constraint firstAttribute="height" constant="70" id="NUH-sE-zVu"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="1">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="hlh-sQ-YEk"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txh-BV-PAn">
-                    <rect key="frame" x="133" y="555" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="133" y="579" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="2" label="numberKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="2">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="F5a-rK-TKl"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9y-PP-QpX">
-                    <rect key="frame" x="211" y="555" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="206" y="579" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="3" label="numberKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="3">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="2fl-XH-oyZ"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-4Q-YSM">
-                    <rect key="frame" x="55" y="477" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="60" y="506" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="4" label="numberKey"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="70" id="fgV-NB-sPZ"/>
+                        <constraint firstAttribute="height" constant="70" id="GNd-Vf-N1S"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="4">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="urd-Cv-An0"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iN-yW-xyk">
-                    <rect key="frame" x="133" y="477" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="133" y="506" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="5" label="numberKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="5">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="9q3-dp-wwj"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GX-ec-uOt">
-                    <rect key="frame" x="211" y="477" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="206" y="506" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="6" label="numberKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="6">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="44C-wT-OPM"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nk5-FB-4Cl">
-                    <rect key="frame" x="55" y="396" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="60" y="433" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="7" label="numberKey"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="70" id="tU7-T6-W0d"/>
+                        <constraint firstAttribute="height" constant="70" id="bHu-Dx-pEb"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="7">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="3e3-k8-3Ta"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUF-rd-lqm">
-                    <rect key="frame" x="133" y="396" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="133" y="433" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="8" label="numberKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="8">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="8Ph-5c-evr"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyE-ue-OJu">
-                    <rect key="frame" x="211" y="396" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="206" y="433" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="9" label="numberKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="9">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="emd-QS-3Ld"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIZ-qj-ens">
-                    <rect key="frame" x="55" y="633" width="148" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="60" y="652" width="143" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="0" label="numberKey"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="70" id="eyB-e4-1YN"/>
+                        <constraint firstAttribute="height" constant="70" id="I4U-90-gMt"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="0">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="eTh-rH-1dW"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neF-z4-EUA">
-                    <rect key="frame" x="211" y="633" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="206" y="652" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="." label="periodKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title=".">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="peiod:" destination="-1" eventType="touchUpInside" id="dHN-Cr-RYa"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KN-vC-d7K">
-                    <rect key="frame" x="289" y="633" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.27126400101968906" green="0.24667525143935581" blue="0.13196304354262406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KN-vC-d7K">
+                    <rect key="frame" x="279" y="652" width="70" height="70"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration" identifier="=" label="solveKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="=">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                     <connections>
                         <action selector="solve:" destination="-1" eventType="touchUpInside" id="avK-wi-VVG"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iT-h3-c32">
-                    <rect key="frame" x="289" y="555" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.15768987679999999" green="0.2383053752" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <accessibility key="accessibilityConfiguration" identifier="+" label="operatorKey"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
-                    <state key="normal" title="+">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="operators:" destination="-1" eventType="touchUpInside" id="hrQ-KT-hJK"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-3m-mqA">
-                    <rect key="frame" x="289" y="477" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.15768987679999999" green="0.2383053752" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-3m-mqA">
+                    <rect key="frame" x="279" y="506" width="70" height="70"/>
+                    <color key="backgroundColor" red="0.89552299222797926" green="0.52384600866956055" blue="0.0017330569124921231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="-" label="operatorKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="-">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="operators:" destination="-1" eventType="touchUpInside" id="BAJ-we-Oio"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn3-Sj-nMF">
-                    <rect key="frame" x="289" y="396" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.15768987679999999" green="0.2383053752" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fn3-Sj-nMF">
+                    <rect key="frame" x="279" y="433" width="70" height="70"/>
+                    <color key="backgroundColor" red="0.89552299222797926" green="0.52384600866956055" blue="0.0017330569124921231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="x" label="operatorKey"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
                     <state key="normal" title="x">
-                        <color key="titleColor" red="0.93479160750000001" green="0.96862745100000003" blue="0.40341513919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="operators:" destination="-1" eventType="touchUpInside" id="tQT-Hd-vGa"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iT-h3-c32">
+                    <rect key="frame" x="279" y="579" width="70" height="70"/>
+                    <color key="backgroundColor" red="0.89552299222797926" green="0.52384600866956055" blue="0.0017330569124921231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" identifier="+" label="operatorKey"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="48"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="operators:" destination="-1" eventType="touchUpInside" id="hrQ-KT-hJK"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="0.79463167609119179" green="0.6115231244262368" blue="0.27856633275814574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <accessibility key="accessibilityConfiguration" label="key1label"/>
             <constraints>
-                <constraint firstItem="2OA-Wb-81Q" firstAttribute="trailing" secondItem="fUF-rd-lqm" secondAttribute="trailing" id="0mT-yR-Q4v"/>
-                <constraint firstItem="Eja-4Q-YSM" firstAttribute="baseline" secondItem="9iN-yW-xyk" secondAttribute="baseline" id="0sI-Y8-Wvt"/>
-                <constraint firstItem="42X-jQ-Mxl" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="55" id="2q7-os-eVf"/>
-                <constraint firstItem="lIZ-qj-ens" firstAttribute="top" secondItem="V6y-NG-Fcf" secondAttribute="bottom" constant="9" id="3qM-p2-hLO"/>
-                <constraint firstItem="42X-jQ-Mxl" firstAttribute="trailing" secondItem="zmo-df-QrC" secondAttribute="trailing" id="4TG-67-bZk"/>
-                <constraint firstItem="V6y-NG-Fcf" firstAttribute="top" secondItem="Eja-4Q-YSM" secondAttribute="bottom" constant="7" id="7lY-wn-CYr"/>
-                <constraint firstItem="iN7-no-da6" firstAttribute="trailing" secondItem="OyE-ue-OJu" secondAttribute="trailing" id="86w-ea-0vb"/>
-                <constraint firstItem="zmo-df-QrC" firstAttribute="trailing" secondItem="PiC-B0-QtL" secondAttribute="trailing" id="8oB-Sv-VGb"/>
-                <constraint firstItem="esx-n9-3sJ" firstAttribute="trailing" secondItem="nk5-FB-4Cl" secondAttribute="trailing" id="9cz-Nd-cGx"/>
-                <constraint firstItem="fn3-Sj-nMF" firstAttribute="leading" secondItem="kcL-3m-mqA" secondAttribute="leading" id="AFF-js-bGe"/>
-                <constraint firstItem="lIZ-qj-ens" firstAttribute="top" secondItem="neF-z4-EUA" secondAttribute="top" id="AIK-oI-ahM"/>
-                <constraint firstItem="esx-n9-3sJ" firstAttribute="top" secondItem="zmo-df-QrC" secondAttribute="bottom" constant="22" id="Buz-mj-dX5"/>
-                <constraint firstItem="PiC-B0-QtL" firstAttribute="leading" secondItem="fn3-Sj-nMF" secondAttribute="leading" id="Egz-Kp-n3f"/>
-                <constraint firstItem="fUF-rd-lqm" firstAttribute="baseline" secondItem="OyE-ue-OJu" secondAttribute="baseline" id="FDI-gf-sag"/>
-                <constraint firstItem="esx-n9-3sJ" firstAttribute="leading" secondItem="nk5-FB-4Cl" secondAttribute="leading" id="FMp-bw-YXw"/>
-                <constraint firstItem="esx-n9-3sJ" firstAttribute="top" secondItem="2OA-Wb-81Q" secondAttribute="top" id="FPB-51-gSh"/>
-                <constraint firstItem="9iN-yW-xyk" firstAttribute="top" secondItem="5GX-ec-uOt" secondAttribute="top" id="GXG-YW-XZy"/>
-                <constraint firstItem="zmo-df-QrC" firstAttribute="leading" secondItem="esx-n9-3sJ" secondAttribute="leading" id="I2m-gX-IHv"/>
-                <constraint firstItem="Txh-BV-PAn" firstAttribute="top" secondItem="F9y-PP-QpX" secondAttribute="top" id="JJR-Sb-lcL"/>
-                <constraint firstItem="fUF-rd-lqm" firstAttribute="leading" secondItem="9iN-yW-xyk" secondAttribute="leading" id="JWP-n8-HDf"/>
-                <constraint firstItem="nk5-FB-4Cl" firstAttribute="top" secondItem="esx-n9-3sJ" secondAttribute="bottom" constant="8" id="JbH-SM-zp3"/>
-                <constraint firstItem="OyE-ue-OJu" firstAttribute="trailing" secondItem="5GX-ec-uOt" secondAttribute="trailing" id="L2Z-nj-bkN"/>
-                <constraint firstItem="iN7-no-da6" firstAttribute="leading" secondItem="OyE-ue-OJu" secondAttribute="leading" id="LDe-P6-yu5"/>
-                <constraint firstItem="42X-jQ-Mxl" firstAttribute="leading" secondItem="zmo-df-QrC" secondAttribute="leading" id="MHT-pr-bDR"/>
-                <constraint firstItem="nk5-FB-4Cl" firstAttribute="baseline" secondItem="fUF-rd-lqm" secondAttribute="baseline" id="MOs-iC-yG7"/>
-                <constraint firstItem="Txh-BV-PAn" firstAttribute="baseline" secondItem="F9y-PP-QpX" secondAttribute="baseline" id="Mbc-cX-EH9"/>
-                <constraint firstItem="kcL-3m-mqA" firstAttribute="leading" secondItem="8iT-h3-c32" secondAttribute="leading" id="Mdy-2F-AuK"/>
-                <constraint firstItem="Txh-BV-PAn" firstAttribute="firstBaseline" secondItem="F9y-PP-QpX" secondAttribute="firstBaseline" id="N4b-U4-El6"/>
-                <constraint firstItem="fUF-rd-lqm" firstAttribute="trailing" secondItem="9iN-yW-xyk" secondAttribute="trailing" id="NHl-lU-oM1"/>
-                <constraint firstItem="kcL-3m-mqA" firstAttribute="trailing" secondItem="8iT-h3-c32" secondAttribute="trailing" id="NNz-FJ-eYV"/>
-                <constraint firstItem="esx-n9-3sJ" firstAttribute="bottom" secondItem="2OA-Wb-81Q" secondAttribute="bottom" id="NjQ-35-2N0"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="lIZ-qj-ens" secondAttribute="bottom" constant="159" id="O0u-lk-inX"/>
-                <constraint firstItem="lIZ-qj-ens" firstAttribute="baseline" secondItem="neF-z4-EUA" secondAttribute="baseline" id="RVA-Fn-lbp"/>
-                <constraint firstItem="8iT-h3-c32" firstAttribute="trailing" secondItem="0KN-vC-d7K" secondAttribute="trailing" id="RaS-U5-gxG"/>
-                <constraint firstItem="zmo-df-QrC" firstAttribute="top" secondItem="42X-jQ-Mxl" secondAttribute="bottom" constant="15" id="RjH-Tp-RQw"/>
-                <constraint firstItem="Eja-4Q-YSM" firstAttribute="top" secondItem="9iN-yW-xyk" secondAttribute="top" id="SzD-wn-t9X"/>
-                <constraint firstItem="nk5-FB-4Cl" firstAttribute="leading" secondItem="Eja-4Q-YSM" secondAttribute="leading" id="U1X-L7-NLz"/>
-                <constraint firstItem="iN7-no-da6" firstAttribute="leading" secondItem="2OA-Wb-81Q" secondAttribute="trailing" constant="8" id="UAh-G7-4Xt"/>
-                <constraint firstItem="5GX-ec-uOt" firstAttribute="top" secondItem="kcL-3m-mqA" secondAttribute="top" id="Vqc-2k-QjM"/>
-                <constraint firstItem="iN7-no-da6" firstAttribute="top" secondItem="PiC-B0-QtL" secondAttribute="top" id="ZNR-KI-Wj5"/>
-                <constraint firstItem="5GX-ec-uOt" firstAttribute="leading" secondItem="F9y-PP-QpX" secondAttribute="leading" id="bP5-Ii-77e"/>
-                <constraint firstItem="9iN-yW-xyk" firstAttribute="leading" secondItem="Txh-BV-PAn" secondAttribute="leading" id="bQ5-sN-T6j"/>
-                <constraint firstItem="F9y-PP-QpX" firstAttribute="top" secondItem="8iT-h3-c32" secondAttribute="top" id="bVy-Oq-09s"/>
-                <constraint firstItem="PiC-B0-QtL" firstAttribute="leading" secondItem="iN7-no-da6" secondAttribute="trailing" constant="8" id="byH-yp-T7D"/>
-                <constraint firstItem="nk5-FB-4Cl" firstAttribute="firstBaseline" secondItem="fUF-rd-lqm" secondAttribute="firstBaseline" id="c2z-dt-PkO"/>
-                <constraint firstItem="2OA-Wb-81Q" firstAttribute="firstBaseline" secondItem="iN7-no-da6" secondAttribute="firstBaseline" id="cQK-6k-Vaw"/>
-                <constraint firstItem="neF-z4-EUA" firstAttribute="firstBaseline" secondItem="0KN-vC-d7K" secondAttribute="firstBaseline" id="f18-7M-vSN"/>
-                <constraint firstItem="8iT-h3-c32" firstAttribute="leading" secondItem="0KN-vC-d7K" secondAttribute="leading" id="fKg-kG-c5K"/>
-                <constraint firstItem="9iN-yW-xyk" firstAttribute="firstBaseline" secondItem="5GX-ec-uOt" secondAttribute="firstBaseline" id="foC-1T-el7"/>
-                <constraint firstItem="2OA-Wb-81Q" firstAttribute="leading" secondItem="esx-n9-3sJ" secondAttribute="trailing" constant="8" id="fxA-gC-Szg"/>
-                <constraint firstItem="F9y-PP-QpX" firstAttribute="trailing" secondItem="neF-z4-EUA" secondAttribute="trailing" id="gyR-a4-Irp"/>
-                <constraint firstItem="neF-z4-EUA" firstAttribute="top" secondItem="0KN-vC-d7K" secondAttribute="top" id="iM6-bK-jJo"/>
-                <constraint firstItem="Eja-4Q-YSM" firstAttribute="trailing" secondItem="V6y-NG-Fcf" secondAttribute="trailing" id="iy5-uY-mwK"/>
-                <constraint firstItem="2OA-Wb-81Q" firstAttribute="top" secondItem="iN7-no-da6" secondAttribute="top" id="kGt-tD-qgQ"/>
-                <constraint firstItem="Eja-4Q-YSM" firstAttribute="leading" secondItem="V6y-NG-Fcf" secondAttribute="leading" id="kpc-pH-huJ"/>
-                <constraint firstItem="5GX-ec-uOt" firstAttribute="firstBaseline" secondItem="kcL-3m-mqA" secondAttribute="firstBaseline" id="m5Y-GW-hE8"/>
-                <constraint firstItem="fn3-Sj-nMF" firstAttribute="trailing" secondItem="kcL-3m-mqA" secondAttribute="trailing" id="mQV-LI-D4A"/>
-                <constraint firstItem="5GX-ec-uOt" firstAttribute="trailing" secondItem="F9y-PP-QpX" secondAttribute="trailing" id="nEJ-Js-dLG"/>
-                <constraint firstItem="lIZ-qj-ens" firstAttribute="top" secondItem="Txh-BV-PAn" secondAttribute="bottom" constant="8" id="njY-hT-mLK"/>
-                <constraint firstItem="Eja-4Q-YSM" firstAttribute="top" secondItem="nk5-FB-4Cl" secondAttribute="bottom" constant="11" id="nkL-Vq-Wi5"/>
-                <constraint firstItem="2OA-Wb-81Q" firstAttribute="leading" secondItem="fUF-rd-lqm" secondAttribute="leading" id="pQs-Hg-lDa"/>
-                <constraint firstItem="Txh-BV-PAn" firstAttribute="trailing" secondItem="lIZ-qj-ens" secondAttribute="trailing" id="pY0-tf-Juo"/>
-                <constraint firstItem="OyE-ue-OJu" firstAttribute="top" secondItem="fn3-Sj-nMF" secondAttribute="top" id="qdi-DT-XgB"/>
-                <constraint firstItem="iN7-no-da6" firstAttribute="firstBaseline" secondItem="PiC-B0-QtL" secondAttribute="firstBaseline" id="qlJ-XW-18b"/>
-                <constraint firstItem="Txh-BV-PAn" firstAttribute="top" secondItem="9iN-yW-xyk" secondAttribute="bottom" constant="8" id="qsD-VF-soF"/>
-                <constraint firstItem="F9y-PP-QpX" firstAttribute="leading" secondItem="neF-z4-EUA" secondAttribute="leading" id="r2T-De-wZ8"/>
-                <constraint firstItem="OyE-ue-OJu" firstAttribute="leading" secondItem="5GX-ec-uOt" secondAttribute="leading" id="rhc-kS-3mi"/>
-                <constraint firstItem="42X-jQ-Mxl" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="93" id="rtw-AY-gPg"/>
-                <constraint firstItem="F9y-PP-QpX" firstAttribute="firstBaseline" secondItem="8iT-h3-c32" secondAttribute="firstBaseline" id="slj-8t-unN"/>
-                <constraint firstItem="fUF-rd-lqm" firstAttribute="top" secondItem="OyE-ue-OJu" secondAttribute="top" id="tHv-Sj-K6K"/>
-                <constraint firstItem="2OA-Wb-81Q" firstAttribute="baseline" secondItem="iN7-no-da6" secondAttribute="baseline" id="tKO-u8-zii"/>
-                <constraint firstItem="lIZ-qj-ens" firstAttribute="firstBaseline" secondItem="neF-z4-EUA" secondAttribute="firstBaseline" id="uqc-JL-4nd"/>
-                <constraint firstItem="nk5-FB-4Cl" firstAttribute="top" secondItem="fUF-rd-lqm" secondAttribute="top" id="vng-cj-k1E"/>
-                <constraint firstItem="9iN-yW-xyk" firstAttribute="trailing" secondItem="Txh-BV-PAn" secondAttribute="trailing" id="wO2-mc-0HD"/>
-                <constraint firstItem="9iN-yW-xyk" firstAttribute="baseline" secondItem="5GX-ec-uOt" secondAttribute="baseline" id="wQK-ol-Nlu"/>
-                <constraint firstItem="fUF-rd-lqm" firstAttribute="firstBaseline" secondItem="OyE-ue-OJu" secondAttribute="firstBaseline" id="wbo-Ch-YSA"/>
-                <constraint firstItem="OyE-ue-OJu" firstAttribute="firstBaseline" secondItem="fn3-Sj-nMF" secondAttribute="firstBaseline" id="xyN-JL-gZI"/>
-                <constraint firstItem="PiC-B0-QtL" firstAttribute="trailing" secondItem="fn3-Sj-nMF" secondAttribute="trailing" id="ymt-VF-WjR"/>
-                <constraint firstItem="V6y-NG-Fcf" firstAttribute="leading" secondItem="lIZ-qj-ens" secondAttribute="leading" id="zG0-cY-J9R"/>
-                <constraint firstItem="nk5-FB-4Cl" firstAttribute="trailing" secondItem="Eja-4Q-YSM" secondAttribute="trailing" id="ztt-sW-4AY"/>
+                <constraint firstItem="2OA-Wb-81Q" firstAttribute="leading" secondItem="fUF-rd-lqm" secondAttribute="leading" id="0Ri-hR-bI2"/>
+                <constraint firstItem="5GX-ec-uOt" firstAttribute="top" secondItem="kcL-3m-mqA" secondAttribute="top" id="0Vz-1M-WdR"/>
+                <constraint firstItem="OyE-ue-OJu" firstAttribute="firstBaseline" secondItem="fn3-Sj-nMF" secondAttribute="firstBaseline" id="1AT-mb-YHR"/>
+                <constraint firstItem="esx-n9-3sJ" firstAttribute="trailing" secondItem="nk5-FB-4Cl" secondAttribute="trailing" id="28M-zR-mIr"/>
+                <constraint firstItem="nk5-FB-4Cl" firstAttribute="firstBaseline" secondItem="fUF-rd-lqm" secondAttribute="firstBaseline" id="2Vo-Jp-5ol"/>
+                <constraint firstItem="lIZ-qj-ens" firstAttribute="top" secondItem="V6y-NG-Fcf" secondAttribute="bottom" constant="3" id="2iE-Lv-10R"/>
+                <constraint firstItem="PiC-B0-QtL" firstAttribute="leading" secondItem="iN7-no-da6" secondAttribute="trailing" constant="3" id="3Id-wA-spK"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="xiO-Wr-KFo" secondAttribute="trailing" constant="38" id="3Sh-4m-EIG"/>
+                <constraint firstItem="fUF-rd-lqm" firstAttribute="trailing" secondItem="9iN-yW-xyk" secondAttribute="trailing" id="3YC-G3-w8B"/>
+                <constraint firstItem="xiO-Wr-KFo" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="80" id="4vb-y4-VOw"/>
+                <constraint firstItem="42X-jQ-Mxl" firstAttribute="trailing" secondItem="zmo-df-QrC" secondAttribute="trailing" id="5BP-lu-ENg"/>
+                <constraint firstItem="2OA-Wb-81Q" firstAttribute="firstBaseline" secondItem="iN7-no-da6" secondAttribute="firstBaseline" id="5ZH-Pw-75f"/>
+                <constraint firstItem="iN7-no-da6" firstAttribute="trailing" secondItem="OyE-ue-OJu" secondAttribute="trailing" id="7zK-2q-Y3R"/>
+                <constraint firstItem="OyE-ue-OJu" firstAttribute="trailing" secondItem="5GX-ec-uOt" secondAttribute="trailing" id="8j4-Cg-8DS"/>
+                <constraint firstItem="iN7-no-da6" firstAttribute="firstBaseline" secondItem="PiC-B0-QtL" secondAttribute="firstBaseline" id="95t-QI-faM"/>
+                <constraint firstItem="iN7-no-da6" firstAttribute="leading" secondItem="OyE-ue-OJu" secondAttribute="leading" id="AJj-EG-8yA"/>
+                <constraint firstItem="kcL-3m-mqA" firstAttribute="trailing" secondItem="8iT-h3-c32" secondAttribute="trailing" id="AZ1-fY-H6F"/>
+                <constraint firstItem="zmo-df-QrC" firstAttribute="top" secondItem="42X-jQ-Mxl" secondAttribute="bottom" constant="15" id="Aht-lj-x8h"/>
+                <constraint firstItem="9iN-yW-xyk" firstAttribute="baseline" secondItem="5GX-ec-uOt" secondAttribute="baseline" id="BRT-F1-hhY"/>
+                <constraint firstItem="iN7-no-da6" firstAttribute="top" secondItem="PiC-B0-QtL" secondAttribute="top" id="CgN-8I-RT9"/>
+                <constraint firstItem="PiC-B0-QtL" firstAttribute="trailing" secondItem="fn3-Sj-nMF" secondAttribute="trailing" id="DJ8-wp-KhY"/>
+                <constraint firstItem="nk5-FB-4Cl" firstAttribute="baseline" secondItem="fUF-rd-lqm" secondAttribute="baseline" id="Dly-qk-Edk"/>
+                <constraint firstItem="kcL-3m-mqA" firstAttribute="leading" secondItem="8iT-h3-c32" secondAttribute="leading" id="EVf-0F-7Gm"/>
+                <constraint firstItem="42X-jQ-Mxl" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="60" id="GZX-av-IWn"/>
+                <constraint firstItem="fUF-rd-lqm" firstAttribute="top" secondItem="OyE-ue-OJu" secondAttribute="top" id="Gr9-D9-0qd"/>
+                <constraint firstItem="fn3-Sj-nMF" firstAttribute="leading" secondItem="kcL-3m-mqA" secondAttribute="leading" id="Hms-Mz-PAa"/>
+                <constraint firstItem="2OA-Wb-81Q" firstAttribute="leading" secondItem="esx-n9-3sJ" secondAttribute="trailing" constant="3" id="JOG-0L-AoG"/>
+                <constraint firstItem="fn3-Sj-nMF" firstAttribute="trailing" secondItem="kcL-3m-mqA" secondAttribute="trailing" id="JZe-iY-Exu"/>
+                <constraint firstItem="zmo-df-QrC" firstAttribute="leading" secondItem="esx-n9-3sJ" secondAttribute="leading" id="LAC-7e-Hv2"/>
+                <constraint firstItem="Eja-4Q-YSM" firstAttribute="top" secondItem="9iN-yW-xyk" secondAttribute="top" id="LK1-fS-ooA"/>
+                <constraint firstItem="V6y-NG-Fcf" firstAttribute="top" secondItem="Txh-BV-PAn" secondAttribute="top" id="La5-mS-Fzh"/>
+                <constraint firstItem="5GX-ec-uOt" firstAttribute="firstBaseline" secondItem="kcL-3m-mqA" secondAttribute="firstBaseline" id="MQn-iO-H3h"/>
+                <constraint firstItem="nk5-FB-4Cl" firstAttribute="top" secondItem="esx-n9-3sJ" secondAttribute="bottom" constant="3" id="N6t-Cx-VVQ"/>
+                <constraint firstItem="V6y-NG-Fcf" firstAttribute="baseline" secondItem="Txh-BV-PAn" secondAttribute="baseline" id="N8r-sL-HSQ"/>
+                <constraint firstItem="Eja-4Q-YSM" firstAttribute="leading" secondItem="V6y-NG-Fcf" secondAttribute="leading" id="Nla-sq-p5V"/>
+                <constraint firstItem="lIZ-qj-ens" firstAttribute="firstBaseline" secondItem="neF-z4-EUA" secondAttribute="firstBaseline" id="Ogx-AJ-5p9"/>
+                <constraint firstItem="neF-z4-EUA" firstAttribute="top" secondItem="0KN-vC-d7K" secondAttribute="top" id="OsR-F6-1Kc"/>
+                <constraint firstItem="5GX-ec-uOt" firstAttribute="trailing" secondItem="F9y-PP-QpX" secondAttribute="trailing" id="P0r-Xz-Rz8"/>
+                <constraint firstItem="zmo-df-QrC" firstAttribute="trailing" secondItem="PiC-B0-QtL" secondAttribute="trailing" id="PsH-yQ-tSY"/>
+                <constraint firstItem="Eja-4Q-YSM" firstAttribute="trailing" secondItem="V6y-NG-Fcf" secondAttribute="trailing" id="QJH-0J-RkW"/>
+                <constraint firstItem="Txh-BV-PAn" firstAttribute="trailing" secondItem="lIZ-qj-ens" secondAttribute="trailing" id="R2E-9C-2fu"/>
+                <constraint firstItem="fUF-rd-lqm" firstAttribute="baseline" secondItem="OyE-ue-OJu" secondAttribute="baseline" id="Rhj-mT-1ZC"/>
+                <constraint firstItem="Txh-BV-PAn" firstAttribute="firstBaseline" secondItem="F9y-PP-QpX" secondAttribute="firstBaseline" id="Tdp-8P-KkX"/>
+                <constraint firstItem="xiO-Wr-KFo" firstAttribute="centerX" secondItem="42X-jQ-Mxl" secondAttribute="centerX" id="Tmr-rP-qiu"/>
+                <constraint firstItem="Eja-4Q-YSM" firstAttribute="top" secondItem="nk5-FB-4Cl" secondAttribute="bottom" constant="3" id="U5Z-KA-Qu2"/>
+                <constraint firstItem="Txh-BV-PAn" firstAttribute="top" secondItem="F9y-PP-QpX" secondAttribute="top" id="U8N-eQ-ymy"/>
+                <constraint firstItem="V6y-NG-Fcf" firstAttribute="top" secondItem="Eja-4Q-YSM" secondAttribute="bottom" constant="3" id="Und-Ia-X8D"/>
+                <constraint firstItem="F9y-PP-QpX" firstAttribute="trailing" secondItem="neF-z4-EUA" secondAttribute="trailing" id="WVl-pA-xUi"/>
+                <constraint firstItem="9iN-yW-xyk" firstAttribute="top" secondItem="5GX-ec-uOt" secondAttribute="top" id="Xia-Hp-bGQ"/>
+                <constraint firstItem="V6y-NG-Fcf" firstAttribute="leading" secondItem="lIZ-qj-ens" secondAttribute="leading" id="Yel-fI-I4v"/>
+                <constraint firstItem="9iN-yW-xyk" firstAttribute="trailing" secondItem="Txh-BV-PAn" secondAttribute="trailing" id="ZDi-Zn-JzX"/>
+                <constraint firstItem="F9y-PP-QpX" firstAttribute="firstBaseline" secondItem="8iT-h3-c32" secondAttribute="firstBaseline" id="a9Z-lI-pSf"/>
+                <constraint firstItem="esx-n9-3sJ" firstAttribute="leading" secondItem="nk5-FB-4Cl" secondAttribute="leading" id="aUF-nD-XDh"/>
+                <constraint firstItem="2OA-Wb-81Q" firstAttribute="baseline" secondItem="iN7-no-da6" secondAttribute="baseline" id="akx-ML-Gmn"/>
+                <constraint firstItem="Eja-4Q-YSM" firstAttribute="firstBaseline" secondItem="9iN-yW-xyk" secondAttribute="firstBaseline" id="bKP-Cj-1sZ"/>
+                <constraint firstItem="nk5-FB-4Cl" firstAttribute="leading" secondItem="Eja-4Q-YSM" secondAttribute="leading" id="cGg-95-hf2"/>
+                <constraint firstItem="OyE-ue-OJu" firstAttribute="leading" secondItem="5GX-ec-uOt" secondAttribute="leading" id="cX8-IE-CeT"/>
+                <constraint firstItem="xiO-Wr-KFo" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="33" id="dDS-XE-neU"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="lIZ-qj-ens" secondAttribute="bottom" constant="140" id="euS-NM-BPT"/>
+                <constraint firstItem="fUF-rd-lqm" firstAttribute="firstBaseline" secondItem="OyE-ue-OJu" secondAttribute="firstBaseline" id="f3a-0f-LOG"/>
+                <constraint firstItem="8iT-h3-c32" firstAttribute="leading" secondItem="0KN-vC-d7K" secondAttribute="leading" id="fIl-bl-EXJ"/>
+                <constraint firstItem="PiC-B0-QtL" firstAttribute="leading" secondItem="fn3-Sj-nMF" secondAttribute="leading" id="gma-pd-qwi"/>
+                <constraint firstItem="42X-jQ-Mxl" firstAttribute="leading" secondItem="zmo-df-QrC" secondAttribute="leading" id="gxq-lT-ovB"/>
+                <constraint firstItem="lIZ-qj-ens" firstAttribute="top" secondItem="neF-z4-EUA" secondAttribute="top" id="hfZ-NH-dDI"/>
+                <constraint firstItem="neF-z4-EUA" firstAttribute="firstBaseline" secondItem="0KN-vC-d7K" secondAttribute="firstBaseline" id="ihV-Ul-NDN"/>
+                <constraint firstItem="9iN-yW-xyk" firstAttribute="leading" secondItem="Txh-BV-PAn" secondAttribute="leading" id="j2b-hu-Bqf"/>
+                <constraint firstItem="5GX-ec-uOt" firstAttribute="leading" secondItem="F9y-PP-QpX" secondAttribute="leading" id="jYS-FD-BVN"/>
+                <constraint firstItem="V6y-NG-Fcf" firstAttribute="firstBaseline" secondItem="Txh-BV-PAn" secondAttribute="firstBaseline" id="kDU-Ks-70E"/>
+                <constraint firstItem="esx-n9-3sJ" firstAttribute="top" secondItem="zmo-df-QrC" secondAttribute="bottom" constant="22" id="kLC-V4-wkT"/>
+                <constraint firstItem="OyE-ue-OJu" firstAttribute="top" secondItem="fn3-Sj-nMF" secondAttribute="top" id="lnF-4t-6sV"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="xiO-Wr-KFo" secondAttribute="bottom" constant="96" id="mvD-Hs-WDC"/>
+                <constraint firstItem="9iN-yW-xyk" firstAttribute="firstBaseline" secondItem="5GX-ec-uOt" secondAttribute="firstBaseline" id="n6l-q4-KHx"/>
+                <constraint firstItem="nk5-FB-4Cl" firstAttribute="trailing" secondItem="Eja-4Q-YSM" secondAttribute="trailing" id="n7D-0o-ltU"/>
+                <constraint firstItem="lIZ-qj-ens" firstAttribute="baseline" secondItem="neF-z4-EUA" secondAttribute="baseline" id="nkE-qo-4Kk"/>
+                <constraint firstItem="fUF-rd-lqm" firstAttribute="leading" secondItem="9iN-yW-xyk" secondAttribute="leading" id="nmk-6s-GNJ"/>
+                <constraint firstItem="esx-n9-3sJ" firstAttribute="top" secondItem="2OA-Wb-81Q" secondAttribute="top" id="ohc-la-4bd"/>
+                <constraint firstItem="8iT-h3-c32" firstAttribute="trailing" secondItem="0KN-vC-d7K" secondAttribute="trailing" id="q7e-kA-fkW"/>
+                <constraint firstItem="F9y-PP-QpX" firstAttribute="leading" secondItem="neF-z4-EUA" secondAttribute="leading" id="r8U-ci-tJL"/>
+                <constraint firstItem="Eja-4Q-YSM" firstAttribute="baseline" secondItem="9iN-yW-xyk" secondAttribute="baseline" id="rhe-CL-CuC"/>
+                <constraint firstItem="42X-jQ-Mxl" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="135" id="sBl-Xz-Eay"/>
+                <constraint firstItem="nk5-FB-4Cl" firstAttribute="top" secondItem="fUF-rd-lqm" secondAttribute="top" id="sxF-Dv-AuO"/>
+                <constraint firstItem="F9y-PP-QpX" firstAttribute="top" secondItem="8iT-h3-c32" secondAttribute="top" id="tyM-9b-nmJ"/>
+                <constraint firstItem="2OA-Wb-81Q" firstAttribute="top" secondItem="iN7-no-da6" secondAttribute="top" id="ulN-Bf-GEE"/>
+                <constraint firstItem="iN7-no-da6" firstAttribute="leading" secondItem="2OA-Wb-81Q" secondAttribute="trailing" constant="3" id="wOG-60-KQe"/>
+                <constraint firstItem="2OA-Wb-81Q" firstAttribute="trailing" secondItem="fUF-rd-lqm" secondAttribute="trailing" id="xcu-ln-fcj"/>
+                <constraint firstItem="esx-n9-3sJ" firstAttribute="bottom" secondItem="2OA-Wb-81Q" secondAttribute="bottom" id="xj5-e2-ZkP"/>
+                <constraint firstItem="Txh-BV-PAn" firstAttribute="baseline" secondItem="F9y-PP-QpX" secondAttribute="baseline" id="yZr-WA-glG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="81" y="-12"/>
+            <point key="canvasLocation" x="79.710144927536234" y="-12.053571428571429"/>
         </view>
     </objects>
 </document>
